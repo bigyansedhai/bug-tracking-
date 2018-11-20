@@ -1,6 +1,6 @@
 ﻿namespace MasterForm
 {
-    partial class Form1
+    partial class BugTrackingSystem
     {
         /// <summary>
         /// Required designer variable.
@@ -28,42 +28,167 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BugTrackingSystem));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.manageUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manageMemberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manageProjectMeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registerNewBugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registerNewSolutionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registerBugSolutionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
+            this.connectToBitBucketToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.connectToBitBuckectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bugHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.lbldate = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.menuStrip1);
-            this.panel1.Controls.Add(this.menuStrip2);
-            this.panel1.Location = new System.Drawing.Point(193, 47);
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1257, 70);
-            this.panel1.TabIndex = 0;
+            // 
+            // menuStrip1
+            // 
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.homeToolStripMenuItem,
+            this.manageUserToolStripMenuItem,
+            this.manageMemberToolStripMenuItem,
+            this.manageProjectMeToolStripMenuItem,
+            this.registerNewBugToolStripMenuItem,
+            this.registerNewSolutionToolStripMenuItem,
+            this.registerBugSolutionToolStripMenuItem,
+            this.connectToBitBucketToolStripMenuItem,
+            this.connectToBitBuckectToolStripMenuItem,
+            this.bugHistoryToolStripMenuItem,
+            this.logoutToolStripMenuItem});
+            this.menuStrip1.Name = "menuStrip1";
+            // 
+            // homeToolStripMenuItem
+            // 
+            this.homeToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
+            resources.ApplyResources(this.homeToolStripMenuItem, "homeToolStripMenuItem");
+            this.homeToolStripMenuItem.Click += new System.EventHandler(this.homeToolStripMenuItem_Click);
+            // 
+            // manageUserToolStripMenuItem
+            // 
+            this.manageUserToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.manageUserToolStripMenuItem.Name = "manageUserToolStripMenuItem";
+            resources.ApplyResources(this.manageUserToolStripMenuItem, "manageUserToolStripMenuItem");
+            this.manageUserToolStripMenuItem.Click += new System.EventHandler(this.manageUserToolStripMenuItem_Click);
+            // 
+            // manageMemberToolStripMenuItem
+            // 
+            this.manageMemberToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.manageMemberToolStripMenuItem.Name = "manageMemberToolStripMenuItem";
+            resources.ApplyResources(this.manageMemberToolStripMenuItem, "manageMemberToolStripMenuItem");
+            this.manageMemberToolStripMenuItem.Click += new System.EventHandler(this.manageMemberToolStripMenuItem_Click);
+            // 
+            // manageProjectMeToolStripMenuItem
+            // 
+            this.manageProjectMeToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.manageProjectMeToolStripMenuItem.Name = "manageProjectMeToolStripMenuItem";
+            resources.ApplyResources(this.manageProjectMeToolStripMenuItem, "manageProjectMeToolStripMenuItem");
+            this.manageProjectMeToolStripMenuItem.Click += new System.EventHandler(this.manageProjectMeToolStripMenuItem_Click);
+            // 
+            // registerNewBugToolStripMenuItem
+            // 
+            this.registerNewBugToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.registerNewBugToolStripMenuItem.Name = "registerNewBugToolStripMenuItem";
+            resources.ApplyResources(this.registerNewBugToolStripMenuItem, "registerNewBugToolStripMenuItem");
+            this.registerNewBugToolStripMenuItem.Click += new System.EventHandler(this.registerNewBugToolStripMenuItem_Click);
+            // 
+            // registerNewSolutionToolStripMenuItem
+            // 
+            this.registerNewSolutionToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.registerNewSolutionToolStripMenuItem.Name = "registerNewSolutionToolStripMenuItem";
+            resources.ApplyResources(this.registerNewSolutionToolStripMenuItem, "registerNewSolutionToolStripMenuItem");
+            this.registerNewSolutionToolStripMenuItem.Click += new System.EventHandler(this.registerNewSolutionToolStripMenuItem_Click);
+            // 
+            // registerBugSolutionToolStripMenuItem
+            // 
+            this.registerBugSolutionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem6});
+            this.registerBugSolutionToolStripMenuItem.Name = "registerBugSolutionToolStripMenuItem";
+            resources.ApplyResources(this.registerBugSolutionToolStripMenuItem, "registerBugSolutionToolStripMenuItem");
+            // 
+            // toolStripMenuItem6
+            // 
+            this.toolStripMenuItem6.Name = "toolStripMenuItem6";
+            resources.ApplyResources(this.toolStripMenuItem6, "toolStripMenuItem6");
+            // 
+            // connectToBitBucketToolStripMenuItem
+            // 
+            this.connectToBitBucketToolStripMenuItem.Name = "connectToBitBucketToolStripMenuItem";
+            resources.ApplyResources(this.connectToBitBucketToolStripMenuItem, "connectToBitBucketToolStripMenuItem");
+            this.connectToBitBucketToolStripMenuItem.Click += new System.EventHandler(this.connectToBitBucketToolStripMenuItem_Click);
+            // 
+            // connectToBitBuckectToolStripMenuItem
+            // 
+            this.connectToBitBuckectToolStripMenuItem.Name = "connectToBitBuckectToolStripMenuItem";
+            resources.ApplyResources(this.connectToBitBuckectToolStripMenuItem, "connectToBitBuckectToolStripMenuItem");
+            this.connectToBitBuckectToolStripMenuItem.Click += new System.EventHandler(this.connectToBitBuckectToolStripMenuItem_Click);
+            // 
+            // bugHistoryToolStripMenuItem
+            // 
+            this.bugHistoryToolStripMenuItem.Name = "bugHistoryToolStripMenuItem";
+            resources.ApplyResources(this.bugHistoryToolStripMenuItem, "bugHistoryToolStripMenuItem");
+            // 
+            // logoutToolStripMenuItem
+            // 
+            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
+            resources.ApplyResources(this.logoutToolStripMenuItem, "logoutToolStripMenuItem");
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.button10);
+            this.panel2.Controls.Add(this.button9);
+            this.panel2.Controls.Add(this.button8);
+            this.panel2.Controls.Add(this.button7);
             this.panel2.Controls.Add(this.button6);
             this.panel2.Controls.Add(this.button5);
             this.panel2.Controls.Add(this.button4);
@@ -72,180 +197,233 @@
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.button1);
-            this.panel2.Location = new System.Drawing.Point(1, 1);
+            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(191, 813);
-            this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // flowLayoutPanel1
+            // button10
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(1, 820);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1395, 76);
-            this.flowLayoutPanel1.TabIndex = 2;
+            this.button10.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.button10, "button10");
+            this.button10.Name = "button10";
+            this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
-            // menuStrip1
+            // button9
             // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.homeToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 24);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1257, 28);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            this.button9.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.button9, "button9");
+            this.button9.Name = "button9";
+            this.button9.UseVisualStyleBackColor = false;
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.button8, "button8");
+            this.button8.Name = "button8";
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // button7
+            // 
+            resources.ApplyResources(this.button7, "button7");
+            this.button7.Name = "button7";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.button6, "button6");
+            this.button6.Name = "button6";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.button5, "button5");
+            this.button5.Name = "button5";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.button4, "button4");
+            this.button4.Name = "button4";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.button3, "button3");
+            this.button3.Name = "button3";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.button2, "button2");
+            this.button2.Name = "button2";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // pictureBox1
+            // 
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.Name = "label2";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.Name = "button1";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Maroon;
             this.panel3.Controls.Add(this.dateTimePicker1);
             this.panel3.Controls.Add(this.label1);
-            this.panel3.Location = new System.Drawing.Point(193, 1);
+            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1254, 56);
-            this.panel3.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Algerian", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(361, 34);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "BUG TRACKING SYSTEM";
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(1014, 9);
+            resources.ApplyResources(this.dateTimePicker1, "dateTimePicker1");
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(232, 22);
-            this.dateTimePicker1.TabIndex = 1;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
-            // menuStrip2
+            // label1
             // 
-            this.menuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip2.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(1257, 24);
-            this.menuStrip2.TabIndex = 2;
-            this.menuStrip2.Text = "menuStrip2";
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
             // 
-            // homeToolStripMenuItem
+            // panel4
             // 
-            this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
-            this.homeToolStripMenuItem.Size = new System.Drawing.Size(62, 24);
-            this.homeToolStripMenuItem.Text = "Home";
+            this.panel4.BackColor = System.Drawing.Color.DarkRed;
+            resources.ApplyResources(this.panel4, "panel4");
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel4.Controls.Add(this.lbldate);
+            this.panel4.Controls.Add(this.label3);
+            this.panel4.ForeColor = System.Drawing.Color.Maroon;
+            this.panel4.Name = "panel4";
             // 
-            // button1
+            // lbldate
             // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Location = new System.Drawing.Point(0, 116);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(186, 113);
-            this.button1.TabIndex = 0;
-            this.button1.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.lbldate, "lbldate");
+            this.lbldate.ForeColor = System.Drawing.Color.Black;
+            this.lbldate.Name = "lbldate";
+            this.lbldate.Click += new System.EventHandler(this.label4_Click);
             // 
-            // label2
+            // label3
             // 
-            this.label2.AutoSize = true;
-            this.label2.Image = ((System.Drawing.Image)(resources.GetObject("label2.Image")));
-            this.label2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label2.Location = new System.Drawing.Point(3, 8);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 17);
-            this.label2.TabIndex = 1;
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // pictureBox1
+            // panel6
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(188, 116);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            resources.ApplyResources(this.panel6, "panel6");
+            this.panel6.BackColor = System.Drawing.Color.Maroon;
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel6.Controls.Add(this.label12);
+            this.panel6.Controls.Add(this.label11);
+            this.panel6.Controls.Add(this.label10);
+            this.panel6.Controls.Add(this.label9);
+            this.panel6.Controls.Add(this.label8);
+            this.panel6.Controls.Add(this.label7);
+            this.panel6.Controls.Add(this.label6);
+            this.panel6.Controls.Add(this.label5);
+            this.panel6.Name = "panel6";
             // 
-            // button2
+            // label12
             // 
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Location = new System.Drawing.Point(0, 450);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(188, 113);
-            this.button2.TabIndex = 3;
-            this.button2.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.label12, "label12");
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Name = "label12";
             // 
-            // button3
+            // label11
             // 
-            this.button3.BackColor = System.Drawing.Color.White;
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Location = new System.Drawing.Point(0, 232);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(188, 113);
-            this.button3.TabIndex = 4;
-            this.button3.UseVisualStyleBackColor = false;
+            resources.ApplyResources(this.label11, "label11");
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Name = "label11";
             // 
-            // button4
+            // label10
             // 
-            this.button4.BackColor = System.Drawing.Color.White;
-            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Location = new System.Drawing.Point(0, 340);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(188, 113);
-            this.button4.TabIndex = 5;
-            this.button4.UseVisualStyleBackColor = false;
+            resources.ApplyResources(this.label10, "label10");
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Name = "label10";
             // 
-            // button5
+            // label9
             // 
-            this.button5.Location = new System.Drawing.Point(0, 588);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(191, 113);
-            this.button5.TabIndex = 6;
-            this.button5.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.label9, "label9");
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Name = "label9";
             // 
-            // button6
+            // label8
             // 
-            this.button6.Location = new System.Drawing.Point(0, 707);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(191, 113);
-            this.button6.TabIndex = 7;
-            this.button6.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.label8, "label8");
+            this.label8.Name = "label8";
             // 
-            // Form1
+            // label7
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            resources.ApplyResources(this.label7, "label7");
+            this.label7.Name = "label7";
+            // 
+            // label6
+            // 
+            resources.ApplyResources(this.label6, "label6");
+            this.label6.Name = "label6";
+            // 
+            // label5
+            // 
+            resources.ApplyResources(this.label5, "label5");
+            this.label5.Name = "label5";
+            // 
+            // BugTrackingSystem
+            // 
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1440, 892);
+            this.BackColor = System.Drawing.Color.Black;
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "BugTrackingSystem";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -258,9 +436,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
-        private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -269,6 +445,33 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ToolStripMenuItem manageUserToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem manageMemberToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem manageProjectMeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registerNewBugToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registerNewSolutionToolStripMenuItem;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbldate;
+        private System.Windows.Forms.ToolStripMenuItem registerBugSolutionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
+        private System.Windows.Forms.ToolStripMenuItem connectToBitBucketToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem connectToBitBuckectToolStripMenuItem;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.ToolStripMenuItem bugHistoryToolStripMenuItem;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
     }
 }
 

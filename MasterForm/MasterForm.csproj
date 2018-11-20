@@ -46,16 +46,92 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Assitantclass.cs" />
+    <Compile Include="BugHistory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="BugHistory.Designer.cs">
+      <DependentUpon>BugHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginFrm.Designer.cs">
+      <DependentUpon>LoginFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageMember.Designer.cs">
+      <DependentUpon>ManageMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageRole.Designer.cs">
+      <DependentUpon>ManageRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageUser.Designer.cs">
+      <DependentUpon>ManageUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="ProjectManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectManagement.Designer.cs">
+      <DependentUpon>ProjectManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectMember.Designer.cs">
+      <DependentUpon>ProjectMember.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="RegisterBug.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterBug.Designer.cs">
+      <DependentUpon>RegisterBug.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterBugSolution.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterBugSolution.Designer.cs">
+      <DependentUpon>RegisterBugSolution.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BugHistory.resx">
+      <DependentUpon>BugHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginFrm.resx">
+      <DependentUpon>LoginFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageMember.resx">
+      <DependentUpon>ManageMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageRole.resx">
+      <DependentUpon>ManageRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageUser.resx">
+      <DependentUpon>ManageUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectManagement.resx">
+      <DependentUpon>ProjectManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectMember.resx">
+      <DependentUpon>ProjectMember.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -66,6 +142,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RegisterBug.resx">
+      <DependentUpon>RegisterBug.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegisterBugSolution.resx">
+      <DependentUpon>RegisterBugSolution.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -77,7 +159,19 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BussinessLogiclayer\BussinessLogiclayer.csproj">
+      <Project>{877bdf6b-dd6c-4c63-9627-a73ce07a84a0}</Project>
+      <Name>BussinessLogiclayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccesslayer\DataAccesslayer.csproj">
+      <Project>{755c6584-aa0e-45d7-91ed-568b1e5503c7}</Project>
+      <Name>DataAccesslayer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

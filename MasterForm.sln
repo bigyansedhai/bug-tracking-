@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.28010.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasterForm", "MasterForm\MasterForm.csproj", "{FA4766D0-6190-40C6-A0BE-1688F896A72D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccesslayer", "DataAccesslayer\DataAccesslayer.csproj", "{755C6584-AA0E-45D7-91ED-568B1E5503C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BussinessLogiclayer", "BussinessLogiclayer\BussinessLogiclayer.csproj", "{877BDF6B-DD6C-4C63-9627-A73CE07A84A0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{FA4766D0-6190-40C6-A0BE-1688F896A72D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA4766D0-6190-40C6-A0BE-1688F896A72D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA4766D0-6190-40C6-A0BE-1688F896A72D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{755C6584-AA0E-45D7-91ED-568B1E5503C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{755C6584-AA0E-45D7-91ED-568B1E5503C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{755C6584-AA0E-45D7-91ED-568B1E5503C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{755C6584-AA0E-45D7-91ED-568B1E5503C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{877BDF6B-DD6C-4C63-9627-A73CE07A84A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{877BDF6B-DD6C-4C63-9627-A73CE07A84A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{877BDF6B-DD6C-4C63-9627-A73CE07A84A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{877BDF6B-DD6C-4C63-9627-A73CE07A84A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
