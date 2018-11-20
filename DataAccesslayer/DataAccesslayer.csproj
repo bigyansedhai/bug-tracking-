@@ -47,6 +47,7 @@
     <Compile Include="ManageUserClass.cs" />
     <Compile Include="ManageUserRoleClass.cs" />
     <Compile Include="MemberClass.cs" />
+    <Compile Include="ProjectManagementClass.cs" />
     <Compile Include="ProjectMemberClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
