@@ -68,8 +68,7 @@ namespace MasterForm
                 MessageBox.Show(ex.Message);
             }
         }
-
-        private void btnAdd_Click(object sender, EventArgs e)
+        public void AddProjectMember()
         {
             bool result = blc.manageProjectMembers(0, Convert.ToInt32(cmbProject.SelectedValue.ToString()), Convert.ToInt32(cmbMember.SelectedValue.ToString()), cmbMemberRole.Text, txtResonse.Text, 1);
             if (result == true)
@@ -84,9 +83,44 @@ namespace MasterForm
                 dgvProjectMember.DataSource = pm.getAllMembersInProject();
                 Assitantclass.makeFieldsBlank(gbAssignMemberForTheProject);
             }
+            
         }
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cmbProject.SelectedIndex < 0)
+                {
+                    MessageBox.Show("Please Select The Project Box");
+                    cmbProject.Focus();
+                }
+                else if (cmbMember.SelectedIndex < 0)
+                {
+                    MessageBox.Show("Please Select The Member Box");
+                    cmbMember.Focus();
+                }
+                else if (cmbMemberRole.SelectedIndex < 0)
+                {
+                    MessageBox.Show("Please Select The Member Role");
+                    cmbMemberRole.Focus();
+                }
+                else if (txtResonse.Text == "")
+                {
+                    MessageBox.Show("please fill the Member Responsibility Box");
+                    txtResonse.Focus();
+                }
+                else
+                {
+                    AddProjectMember();
+                }
+            }
+            catch (Exception ex)
+            {
 
-        private void btnUpdate_Click(object sender, EventArgs e)
+                MessageBox.Show(ex.Message);
+            }
+        }
+        public void UpdateProjectMember()
         {
 
             bool result = blc.manageProjectMembers(projectmemberid, Convert.ToInt32(cmbProject.SelectedValue.ToString()), Convert.ToInt32(cmbMember.SelectedValue.ToString()), cmbMemberRole.Text, txtResonse.Text, 2);
@@ -100,24 +134,95 @@ namespace MasterForm
             {
                 MessageBox.Show("ERROR IN MODIFYING MEMBER INFORMATION OF THE PROJECT");
                 dgvProjectMember.DataSource = pm.getAllMembersInProject();
-               Assitantclass.makeFieldsBlank(gbAssignMemberForTheProject);
+                Assitantclass.makeFieldsBlank(gbAssignMemberForTheProject);
+            }
+        }
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cmbProject.SelectedIndex < 0)
+                {
+                    MessageBox.Show("Please Select The Project Box");
+                    cmbProject.Focus();
+                }
+                else if (cmbMember.SelectedIndex < 0)
+                {
+                    MessageBox.Show("Please Select The Member Box");
+                    cmbMember.Focus();
+                }
+                else if (cmbMemberRole.SelectedIndex < 0)
+                {
+                    MessageBox.Show("Please Select The Member Role");
+                    cmbMemberRole.Focus();
+                }
+                else if (txtResonse.Text == "")
+                {
+                    MessageBox.Show("please fill the Member Responsibility Box");
+                    txtResonse.Focus();
+                }
+                else
+                {
+                    UpdateProjectMember();
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
             }
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
+        public void DeleteMemberProject()
         {
             bool result = blc.manageProjectMembers(projectmemberid, Convert.ToInt32(cmbProject.SelectedValue.ToString()), Convert.ToInt32(cmbMember.SelectedValue.ToString()), cmbMemberRole.Text, txtResonse.Text, 3);
             if (result == true)
             {
                 MessageBox.Show("PROJECT MEMBER HAS BEEN DELETED");
                 dgvProjectMember.DataSource = pm.getAllMembersInProject();
-               Assitantclass.makeFieldsBlank(gbAssignMemberForTheProject);
+                Assitantclass.makeFieldsBlank(gbAssignMemberForTheProject);
             }
             else
             {
                 MessageBox.Show("ERROR IN DELETING PROJECT MEMBER FROM THE PROJECT");
                 dgvProjectMember.DataSource = pm.getAllMembersInProject();
                 Assitantclass.makeFieldsBlank(gbAssignMemberForTheProject);
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cmbProject.SelectedIndex < 0)
+                {
+                    MessageBox.Show("Please Select The Project Box");
+                    cmbProject.Focus();
+                }
+                else if (cmbMember.SelectedIndex < 0)
+                {
+                    MessageBox.Show("Please Select The Member Box");
+                    cmbMember.Focus();
+                }
+                else if (cmbMemberRole.SelectedIndex < 0)
+                {
+                    MessageBox.Show("Please Select The Member Role");
+                    cmbMemberRole.Focus();
+                }
+                else if (txtResonse.Text == "")
+                {
+                    MessageBox.Show("please fill the Member Responsibility Box");
+                    txtResonse.Focus();
+                }
+                else
+                {
+                    DeleteMemberProject();
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
             }
         }
     }

@@ -76,7 +76,7 @@ namespace MasterForm
             }
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        public void AddManageMember()
         {
             try
             {
@@ -85,15 +85,61 @@ namespace MasterForm
                 {
                     MessageBox.Show("NEW MEMBER HAS SUCCESSFULLY CREATED");
                     dgvManageMember.DataSource = mcl.getAllMembers();
-                 Assitantclass.makeFieldsBlank(pnlMemberInformation);
+                    Assitantclass.makeFieldsBlank(pnlMemberInformation);
                     pbProfilePicture.Image = null;
                 }
                 else
                 {
                     MessageBox.Show("ERROR IN CREATING MEMBER");
                     dgvManageMember.DataSource = mcl.getAllMembers();
-                   Assitantclass.makeFieldsBlank(pnlMemberInformation);
+                    Assitantclass.makeFieldsBlank(pnlMemberInformation);
                     pbProfilePicture.Image = null;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtMemberName.Text== "")
+                {
+                    MessageBox.Show("Please provide Member Name");
+                    txtMemberName.Focus();
+                }
+                else if (txtMemberAddress.Text=="")
+                {
+                    MessageBox.Show("Please Provide Member Address");
+                    txtMemberAddress.Focus();
+                }
+                else if (txtConatctNumber.Text=="")
+                {
+                    MessageBox.Show("Please Provide Contact Number");
+                    txtConatctNumber.Focus();
+                }
+                else if (txtEmailAddress.Text == "")
+                {
+                    MessageBox.Show("please Provide EmailAddress");
+                    txtEmailAddress.Focus();
+                }
+                else if(cmbGender.SelectedIndex < 0)
+                {
+                    MessageBox.Show("Please provide Gender");
+                    cmbGender.Focus();
+                }
+                else if(pbProfilePicture.Image==null)
+                {
+                    MessageBox.Show("Please Select The Picture from Gallary");
+                    pbProfilePicture.Focus();
+                }
+                else
+                {
+                    AddManageMember();
                 }
             }
             catch (Exception ex)
@@ -107,8 +153,7 @@ namespace MasterForm
         {
 
         }
-
-        private void btnUpdate_Click(object sender, EventArgs e)
+        public void UpdateManageMenber()
         {
             try
             {
@@ -134,8 +179,53 @@ namespace MasterForm
                 MessageBox.Show(ex.Message);
             }
         }
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtMemberName.Text == "")
+                {
+                    MessageBox.Show("Please provide Member Name");
+                    txtMemberName.Focus();
+                }
+                else if (txtMemberAddress.Text == "")
+                {
+                    MessageBox.Show("Please Provide Member Address");
+                    txtMemberAddress.Focus();
+                }
+                else if (txtConatctNumber.Text == "")
+                {
+                    MessageBox.Show("Please Provide Contact Number");
+                    txtConatctNumber.Focus();
+                }
+                else if (txtEmailAddress.Text == "")
+                {
+                    MessageBox.Show("please Provide EmailAddress");
+                    txtEmailAddress.Focus();
+                }
+                else if (cmbGender.SelectedIndex < 0)
+                {
+                    MessageBox.Show("Please provide Gender");
+                    cmbGender.Focus();
+                }
+                else if (pbProfilePicture.Image == null)
+                {
+                    MessageBox.Show("Please Select The Picture from Gallary");
+                    pbProfilePicture.Focus();
+                }
+                else
+                {
+                    UpdateManageMenber();
+                }
+            }
+            catch (Exception ex)
+            {
 
-        private void btnDelete_Click(object sender, EventArgs e)
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        public void DeleteManageMember()
         {
             try
             {
@@ -153,6 +243,51 @@ namespace MasterForm
                     dgvManageMember.DataSource = mcl.getAllMembers();
                     Assitantclass.makeFieldsBlank(pnlMemberInformation);
                     pbProfilePicture.Image = null;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtMemberName.Text == "")
+                {
+                    MessageBox.Show("Please provide Member Name");
+                    txtMemberName.Focus();
+                }
+                else if (txtMemberAddress.Text == "")
+                {
+                    MessageBox.Show("Please Provide Member Address");
+                    txtMemberAddress.Focus();
+                }
+                else if (txtConatctNumber.Text == "")
+                {
+                    MessageBox.Show("Please Provide Contact Number");
+                    txtConatctNumber.Focus();
+                }
+                else if (txtEmailAddress.Text == "")
+                {
+                    MessageBox.Show("please Provide EmailAddress");
+                    txtEmailAddress.Focus();
+                }
+                else if (cmbGender.SelectedIndex < 0)
+                {
+                    MessageBox.Show("Please provide Gender");
+                    cmbGender.Focus();
+                }
+                else if (pbProfilePicture.Image == null)
+                {
+                    MessageBox.Show("Please Select The Picture from Gallary");
+                    pbProfilePicture.Focus();
+                }
+                else
+                {
+                    DeleteManageMember();
                 }
             }
             catch (Exception ex)

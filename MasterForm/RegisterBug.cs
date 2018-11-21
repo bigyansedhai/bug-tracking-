@@ -50,7 +50,8 @@ namespace MasterForm
 
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+       
+        public void AddRegisterBug()
         {
             try
             {
@@ -71,14 +72,77 @@ namespace MasterForm
                     pbPictureImages.Image = null;
                 }
             }
-           
+
             catch (Exception ex)
             {
 
-               MessageBox.Show(ex.Message);
-                
+                MessageBox.Show(ex.Message);
+
             }
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cmbIdentityBy.SelectedIndex < 0)
+                {
+                    MessageBox.Show("Please Provide the Identity By");
+                    cmbIdentityBy.Focus();
+
+                }
+                else if (cmbProjectName.SelectedIndex < 0)
+                {
+                    MessageBox.Show("Please Provide the Project Name");
+                    cmbProjectName.Focus();
+                }
+                else if (txtClassLibrary.Text == "")
+                {
+                    MessageBox.Show("Please Provide the Class Libaray");
+                    txtClassLibrary.Focus();
+                }
+                else if (txtClass.Text == "")
+                {
+                    MessageBox.Show("Please Provide the ClassName");
+                    txtClass.Focus();
+                }
+                else if (txtMethod.Text == "")
+                {
+                    MessageBox.Show("Please Provide the Method");
+                    txtMethod.Focus();
+                }
+                else if (txtBlock.Text == "")
+                {
+                    MessageBox.Show("Please provide the Block");
+                    txtBlock.Focus();
+                }
+                else if (txtLineNumber.Text == "")
+                {
+                    MessageBox.Show("Please Provide the Line Number");
+                    txtLineNumber.Focus();
+                }
+                else if (txtBugDetails.Text == "")
+                {
+                    MessageBox.Show("Please Provide the Bug Details");
+                    txtBugDetails.Focus();
+                }
+                else if (pbPictureImages.Image == null)
+                {
+                    MessageBox.Show("Please Select The Picture from Gallary");
+                    pbPictureImages.Focus();
+                }
+                else
+                {
+                    AddRegisterBug();
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+         }
 
         private void btnBrowse_Click(object sender, EventArgs e)
         {
@@ -157,12 +221,12 @@ namespace MasterForm
 
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
+        public void UpdateRegisterBug()
         {
             try
             {
 
-                bool result = blc.manageBugs(bugId, Convert.ToDateTime(dtpBugIdentityDate.Text), Convert.ToInt32(cmbIdentityBy.SelectedValue.ToString()), Convert.ToInt32(cmbProjectName.SelectedValue.ToString()), txtClassLibrary.Text, txtClass.Text, txtMethod.Text, txtBlock.Text, txtLineNumber.Text, txtBugDetails.Text, Assitantclass.imageConverter(pbPictureImages),txtCode1.Rtf,2);
+                bool result = blc.manageBugs(bugId, Convert.ToDateTime(dtpBugIdentityDate.Text), Convert.ToInt32(cmbIdentityBy.SelectedValue.ToString()), Convert.ToInt32(cmbProjectName.SelectedValue.ToString()), txtClassLibrary.Text, txtClass.Text, txtMethod.Text, txtBlock.Text, txtLineNumber.Text, txtBugDetails.Text, Assitantclass.imageConverter(pbPictureImages), txtCode1.Rtf, 2);
                 if (result == true)
                 {
                     MessageBox.Show("NEW BUG RECORD HAS BEEN UPDATED");
@@ -185,17 +249,79 @@ namespace MasterForm
             catch (Exception ex)
             {
 
-                //MessageBox.Show(ex.Message);
-                throw ex;
+                MessageBox.Show(ex.Message);
+                
+            }
+        }
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cmbIdentityBy.SelectedIndex < 0)
+                {
+                    MessageBox.Show("Please Provide the Identity By");
+                    cmbIdentityBy.Focus();
+
+                }
+                else if (cmbProjectName.SelectedIndex < 0)
+                {
+                    MessageBox.Show("Please Provide the Project Name");
+                    cmbProjectName.Focus();
+                }
+                else if (txtClassLibrary.Text == "")
+                {
+                    MessageBox.Show("Please Provide the Class Libaray");
+                    txtClassLibrary.Focus();
+                }
+                else if (txtClass.Text == "")
+                {
+                    MessageBox.Show("Please Provide the ClassName");
+                    txtClass.Focus();
+                }
+                else if (txtMethod.Text == "")
+                {
+                    MessageBox.Show("Please Provide the Method");
+                    txtMethod.Focus();
+                }
+                else if (txtBlock.Text == "")
+                {
+                    MessageBox.Show("Please provide the Block");
+                    txtBlock.Focus();
+                }
+                else if (txtLineNumber.Text == "")
+                {
+                    MessageBox.Show("Please Provide the Line Number");
+                    txtLineNumber.Focus();
+                }
+                else if (txtBugDetails.Text == "")
+                {
+                    MessageBox.Show("Please Provide the Bug Details");
+                    txtBugDetails.Focus();
+                }
+                else if (pbPictureImages.Image == null)
+                {
+                    MessageBox.Show("Please Select The Picture from Gallary");
+                    pbPictureImages.Focus();
+                }
+                else
+                {
+                    UpdateRegisterBug();
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
             }
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
+        public void DeleteRegBug()
         {
             try
             {
 
-                bool result = blc.manageBugs(bugId, Convert.ToDateTime(dtpBugIdentityDate.Text), Convert.ToInt32(cmbIdentityBy.SelectedValue.ToString()), Convert.ToInt32(cmbProjectName.SelectedValue.ToString()), txtClassLibrary.Text, txtClass.Text, txtMethod.Text, txtBlock.Text, txtLineNumber.Text, txtBugDetails.Text, Assitantclass.imageConverter(pbPictureImages),txtCode1.Rtf, 3);
+                bool result = blc.manageBugs(bugId, Convert.ToDateTime(dtpBugIdentityDate.Text), Convert.ToInt32(cmbIdentityBy.SelectedValue.ToString()), Convert.ToInt32(cmbProjectName.SelectedValue.ToString()), txtClassLibrary.Text, txtClass.Text, txtMethod.Text, txtBlock.Text, txtLineNumber.Text, txtBugDetails.Text, Assitantclass.imageConverter(pbPictureImages), txtCode1.Rtf, 3);
                 if (result == true)
                 {
                     MessageBox.Show("NEW BUG RECORD HAS BEEN SUCCESSFULLY DELETED");
@@ -218,8 +344,70 @@ namespace MasterForm
             catch (Exception ex)
             {
 
-                
+
                 throw ex;
+            }
+        }
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cmbIdentityBy.SelectedIndex < 0)
+                {
+                    MessageBox.Show("Please Provide the Identity By");
+                    cmbIdentityBy.Focus();
+
+                }
+                else if (cmbProjectName.SelectedIndex < 0)
+                {
+                    MessageBox.Show("Please Provide the Project Name");
+                    cmbProjectName.Focus();
+                }
+                else if (txtClassLibrary.Text == "")
+                {
+                    MessageBox.Show("Please Provide the Class Libaray");
+                    txtClassLibrary.Focus();
+                }
+                else if (txtClass.Text == "")
+                {
+                    MessageBox.Show("Please Provide the ClassName");
+                    txtClass.Focus();
+                }
+                else if (txtMethod.Text == "")
+                {
+                    MessageBox.Show("Please Provide the Method");
+                    txtMethod.Focus();
+                }
+                else if (txtBlock.Text == "")
+                {
+                    MessageBox.Show("Please provide the Block");
+                    txtBlock.Focus();
+                }
+                else if (txtLineNumber.Text == "")
+                {
+                    MessageBox.Show("Please Provide the Line Number");
+                    txtLineNumber.Focus();
+                }
+                else if (txtBugDetails.Text == "")
+                {
+                    MessageBox.Show("Please Provide the Bug Details");
+                    txtBugDetails.Focus();
+                }
+                else if (pbPictureImages.Image == null)
+                {
+                    MessageBox.Show("Please Select The Picture from Gallary");
+                    pbPictureImages.Focus();
+                }
+                else
+                {
+                    DeleteRegBug();
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
             }
         }
 

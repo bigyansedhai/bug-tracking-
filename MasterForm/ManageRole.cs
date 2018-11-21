@@ -62,7 +62,8 @@ namespace MasterForm
             }
         }
         private void btnAdd_Click(object sender, EventArgs e)
-        {
+        {   
+            /// Starting Validation for form
             try
             {
                 if (txtUserRole.Text == "")
