@@ -31,42 +31,44 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.pnlManageBugInformation = new System.Windows.Forms.Panel();
+            this.txtCode1 = new System.Windows.Forms.RichTextBox();
+            this.txtcode = new System.Windows.Forms.Label();
+            this.txtBugDetails = new System.Windows.Forms.TextBox();
+            this.txtLineNumber = new System.Windows.Forms.TextBox();
+            this.txtBlock = new System.Windows.Forms.TextBox();
+            this.txtMethod = new System.Windows.Forms.TextBox();
+            this.txtClass = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtClassLibrary = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.cmbProject = new System.Windows.Forms.ComboBox();
+            this.cmbProjectName = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.cmbIdentityBy = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.dtpbugidentity = new System.Windows.Forms.DateTimePicker();
+            this.dtpBugIdentityDate = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnBrowse = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pbPictureImages = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvRegisterBug = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.pnlManageBugInformation.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPictureImages)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRegisterBug)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -91,35 +93,220 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.pnlManageBugInformation);
             this.groupBox1.Controls.Add(this.panel4);
-            this.groupBox1.Controls.Add(this.textBox7);
-            this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btnBrowse);
             this.groupBox1.Controls.Add(this.panel2);
-            this.groupBox1.Controls.Add(this.textBox6);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.cmbProject);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.cmbIdentityBy);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.dtpbugidentity);
-            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(12, 103);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1088, 517);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Register Bug";
+            // 
+            // pnlManageBugInformation
+            // 
+            this.pnlManageBugInformation.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.pnlManageBugInformation.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlManageBugInformation.Controls.Add(this.txtCode1);
+            this.pnlManageBugInformation.Controls.Add(this.txtcode);
+            this.pnlManageBugInformation.Controls.Add(this.txtBugDetails);
+            this.pnlManageBugInformation.Controls.Add(this.txtLineNumber);
+            this.pnlManageBugInformation.Controls.Add(this.txtBlock);
+            this.pnlManageBugInformation.Controls.Add(this.txtMethod);
+            this.pnlManageBugInformation.Controls.Add(this.txtClass);
+            this.pnlManageBugInformation.Controls.Add(this.label10);
+            this.pnlManageBugInformation.Controls.Add(this.label9);
+            this.pnlManageBugInformation.Controls.Add(this.label8);
+            this.pnlManageBugInformation.Controls.Add(this.label7);
+            this.pnlManageBugInformation.Controls.Add(this.label6);
+            this.pnlManageBugInformation.Controls.Add(this.txtClassLibrary);
+            this.pnlManageBugInformation.Controls.Add(this.label5);
+            this.pnlManageBugInformation.Controls.Add(this.cmbProjectName);
+            this.pnlManageBugInformation.Controls.Add(this.label4);
+            this.pnlManageBugInformation.Controls.Add(this.cmbIdentityBy);
+            this.pnlManageBugInformation.Controls.Add(this.label3);
+            this.pnlManageBugInformation.Controls.Add(this.dtpBugIdentityDate);
+            this.pnlManageBugInformation.Controls.Add(this.label2);
+            this.pnlManageBugInformation.Location = new System.Drawing.Point(7, 16);
+            this.pnlManageBugInformation.Name = "pnlManageBugInformation";
+            this.pnlManageBugInformation.Size = new System.Drawing.Size(725, 501);
+            this.pnlManageBugInformation.TabIndex = 42;
+            // 
+            // txtCode1
+            // 
+            this.txtCode1.Location = new System.Drawing.Point(185, 274);
+            this.txtCode1.Name = "txtCode1";
+            this.txtCode1.Size = new System.Drawing.Size(457, 111);
+            this.txtCode1.TabIndex = 56;
+            this.txtCode1.Text = "";
+            // 
+            // txtcode
+            // 
+            this.txtcode.AutoSize = true;
+            this.txtcode.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcode.Location = new System.Drawing.Point(14, 303);
+            this.txtcode.Name = "txtcode";
+            this.txtcode.Size = new System.Drawing.Size(63, 22);
+            this.txtcode.TabIndex = 55;
+            this.txtcode.Text = "Code :";
+            // 
+            // txtBugDetails
+            // 
+            this.txtBugDetails.Location = new System.Drawing.Point(185, 391);
+            this.txtBugDetails.Multiline = true;
+            this.txtBugDetails.Name = "txtBugDetails";
+            this.txtBugDetails.Size = new System.Drawing.Size(457, 103);
+            this.txtBugDetails.TabIndex = 54;
+            // 
+            // txtLineNumber
+            // 
+            this.txtLineNumber.Location = new System.Drawing.Point(185, 246);
+            this.txtLineNumber.Name = "txtLineNumber";
+            this.txtLineNumber.Size = new System.Drawing.Size(200, 22);
+            this.txtLineNumber.TabIndex = 53;
+            // 
+            // txtBlock
+            // 
+            this.txtBlock.Location = new System.Drawing.Point(185, 218);
+            this.txtBlock.Name = "txtBlock";
+            this.txtBlock.Size = new System.Drawing.Size(200, 22);
+            this.txtBlock.TabIndex = 52;
+            // 
+            // txtMethod
+            // 
+            this.txtMethod.Location = new System.Drawing.Point(185, 181);
+            this.txtMethod.Name = "txtMethod";
+            this.txtMethod.Size = new System.Drawing.Size(200, 22);
+            this.txtMethod.TabIndex = 51;
+            // 
+            // txtClass
+            // 
+            this.txtClass.Location = new System.Drawing.Point(185, 148);
+            this.txtClass.Name = "txtClass";
+            this.txtClass.Size = new System.Drawing.Size(200, 22);
+            this.txtClass.TabIndex = 50;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(14, 396);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(114, 22);
+            this.label10.TabIndex = 49;
+            this.label10.Text = "Bug Details :";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(14, 245);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(124, 22);
+            this.label9.TabIndex = 48;
+            this.label9.Text = "Line Number :";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(14, 211);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(68, 22);
+            this.label8.TabIndex = 47;
+            this.label8.Text = "Block :";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(14, 180);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(81, 22);
+            this.label7.TabIndex = 46;
+            this.label7.Text = "Method :";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(14, 147);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(65, 22);
+            this.label6.TabIndex = 45;
+            this.label6.Text = "Class :";
+            // 
+            // txtClassLibrary
+            // 
+            this.txtClassLibrary.Location = new System.Drawing.Point(185, 112);
+            this.txtClassLibrary.Name = "txtClassLibrary";
+            this.txtClassLibrary.Size = new System.Drawing.Size(200, 22);
+            this.txtClassLibrary.TabIndex = 44;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(14, 112);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(124, 22);
+            this.label5.TabIndex = 43;
+            this.label5.Text = "Class library :";
+            // 
+            // cmbProjectName
+            // 
+            this.cmbProjectName.FormattingEnabled = true;
+            this.cmbProjectName.Location = new System.Drawing.Point(185, 77);
+            this.cmbProjectName.Name = "cmbProjectName";
+            this.cmbProjectName.Size = new System.Drawing.Size(200, 24);
+            this.cmbProjectName.TabIndex = 42;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(14, 76);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(129, 22);
+            this.label4.TabIndex = 41;
+            this.label4.Text = "Project Name :";
+            // 
+            // cmbIdentityBy
+            // 
+            this.cmbIdentityBy.FormattingEnabled = true;
+            this.cmbIdentityBy.Location = new System.Drawing.Point(185, 43);
+            this.cmbIdentityBy.Name = "cmbIdentityBy";
+            this.cmbIdentityBy.Size = new System.Drawing.Size(200, 24);
+            this.cmbIdentityBy.TabIndex = 40;
+            this.cmbIdentityBy.SelectedIndexChanged += new System.EventHandler(this.cmbIdentityBy_SelectedIndexChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(14, 45);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(124, 22);
+            this.label3.TabIndex = 39;
+            this.label3.Text = "Identified By :";
+            // 
+            // dtpBugIdentityDate
+            // 
+            this.dtpBugIdentityDate.Location = new System.Drawing.Point(185, 14);
+            this.dtpBugIdentityDate.Name = "dtpBugIdentityDate";
+            this.dtpBugIdentityDate.Size = new System.Drawing.Size(200, 22);
+            this.dtpBugIdentityDate.TabIndex = 38;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(14, 15);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(165, 22);
+            this.label2.TabIndex = 37;
+            this.label2.Text = "BugIdentifiedDate :";
             // 
             // panel4
             // 
@@ -141,6 +328,7 @@
             this.btnAdd.TabIndex = 23;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnDelete
             // 
@@ -151,6 +339,7 @@
             this.btnDelete.TabIndex = 25;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
@@ -161,231 +350,64 @@
             this.btnUpdate.TabIndex = 24;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // textBox7
+            // btnBrowse
             // 
-            this.textBox7.Location = new System.Drawing.Point(143, 382);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(507, 130);
-            this.textBox7.TabIndex = 40;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(6, 383);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(114, 22);
-            this.label11.TabIndex = 39;
-            this.label11.Text = "Bug Details :";
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(825, 232);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(163, 33);
-            this.button1.TabIndex = 38;
-            this.button1.Text = "Browse";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnBrowse.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBrowse.Location = new System.Drawing.Point(825, 232);
+            this.btnBrowse.Name = "btnBrowse";
+            this.btnBrowse.Size = new System.Drawing.Size(163, 33);
+            this.btnBrowse.TabIndex = 38;
+            this.btnBrowse.Text = "Browse";
+            this.btnBrowse.UseVisualStyleBackColor = true;
+            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
             // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.pbPictureImages);
             this.panel2.Location = new System.Drawing.Point(736, 16);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(346, 206);
             this.panel2.TabIndex = 37;
             // 
-            // pictureBox1
+            // pbPictureImages
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(342, 202);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(177, 298);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(200, 43);
-            this.textBox6.TabIndex = 36;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(177, 266);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(200, 22);
-            this.textBox5.TabIndex = 35;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(177, 238);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(200, 22);
-            this.textBox4.TabIndex = 34;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(177, 201);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(200, 22);
-            this.textBox3.TabIndex = 33;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(177, 168);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(200, 22);
-            this.textBox2.TabIndex = 32;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(6, 297);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(114, 22);
-            this.label10.TabIndex = 31;
-            this.label10.Text = "Bug Details :";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(6, 265);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(124, 22);
-            this.label9.TabIndex = 30;
-            this.label9.Text = "Line Number :";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(6, 231);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(68, 22);
-            this.label8.TabIndex = 29;
-            this.label8.Text = "Block :";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(6, 200);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(81, 22);
-            this.label7.TabIndex = 28;
-            this.label7.Text = "Method :";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(6, 167);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(65, 22);
-            this.label6.TabIndex = 27;
-            this.label6.Text = "Class :";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(177, 132);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 22);
-            this.textBox1.TabIndex = 26;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(6, 132);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(124, 22);
-            this.label5.TabIndex = 25;
-            this.label5.Text = "Class library :";
-            // 
-            // cmbProject
-            // 
-            this.cmbProject.FormattingEnabled = true;
-            this.cmbProject.Location = new System.Drawing.Point(177, 97);
-            this.cmbProject.Name = "cmbProject";
-            this.cmbProject.Size = new System.Drawing.Size(200, 24);
-            this.cmbProject.TabIndex = 24;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(6, 96);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(78, 22);
-            this.label4.TabIndex = 23;
-            this.label4.Text = "Project :";
-            // 
-            // cmbIdentityBy
-            // 
-            this.cmbIdentityBy.FormattingEnabled = true;
-            this.cmbIdentityBy.Location = new System.Drawing.Point(177, 63);
-            this.cmbIdentityBy.Name = "cmbIdentityBy";
-            this.cmbIdentityBy.Size = new System.Drawing.Size(200, 24);
-            this.cmbIdentityBy.TabIndex = 22;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(6, 65);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(124, 22);
-            this.label3.TabIndex = 21;
-            this.label3.Text = "Identified By :";
-            // 
-            // dtpbugidentity
-            // 
-            this.dtpbugidentity.Location = new System.Drawing.Point(177, 34);
-            this.dtpbugidentity.Name = "dtpbugidentity";
-            this.dtpbugidentity.Size = new System.Drawing.Size(200, 22);
-            this.dtpbugidentity.TabIndex = 20;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 35);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(165, 22);
-            this.label2.TabIndex = 19;
-            this.label2.Text = "BugIdentifiedDate :";
+            this.pbPictureImages.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbPictureImages.Location = new System.Drawing.Point(0, 0);
+            this.pbPictureImages.Name = "pbPictureImages";
+            this.pbPictureImages.Size = new System.Drawing.Size(342, 202);
+            this.pbPictureImages.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbPictureImages.TabIndex = 0;
+            this.pbPictureImages.TabStop = false;
             // 
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel3.Controls.Add(this.dataGridView1);
+            this.panel3.Controls.Add(this.dgvRegisterBug);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(0, 638);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1112, 172);
             this.panel3.TabIndex = 2;
             // 
-            // dataGridView1
+            // dgvRegisterBug
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1108, 168);
-            this.dataGridView1.TabIndex = 41;
+            this.dgvRegisterBug.AllowUserToAddRows = false;
+            this.dgvRegisterBug.AllowUserToDeleteRows = false;
+            this.dgvRegisterBug.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvRegisterBug.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRegisterBug.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvRegisterBug.Location = new System.Drawing.Point(0, 0);
+            this.dgvRegisterBug.Name = "dgvRegisterBug";
+            this.dgvRegisterBug.ReadOnly = true;
+            this.dgvRegisterBug.RowTemplate.Height = 24;
+            this.dgvRegisterBug.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvRegisterBug.Size = new System.Drawing.Size(1108, 168);
+            this.dgvRegisterBug.TabIndex = 41;
+            this.dgvRegisterBug.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRegisterBug_CellClick);
+            this.dgvRegisterBug.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRegisterBug_CellContentClick);
             // 
             // RegisterBug
             // 
@@ -397,15 +419,17 @@
             this.Controls.Add(this.panel1);
             this.Name = "RegisterBug";
             this.Text = "RegisterBug";
+            this.Load += new System.EventHandler(this.RegisterBug_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.pnlManageBugInformation.ResumeLayout(false);
+            this.pnlManageBugInformation.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPictureImages)).EndInit();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRegisterBug)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -415,34 +439,35 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnBrowse;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.PictureBox pbPictureImages;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.DataGridView dgvRegisterBug;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Panel pnlManageBugInformation;
+        private System.Windows.Forms.TextBox txtBugDetails;
+        private System.Windows.Forms.TextBox txtLineNumber;
+        private System.Windows.Forms.TextBox txtBlock;
+        private System.Windows.Forms.TextBox txtMethod;
+        private System.Windows.Forms.TextBox txtClass;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtClassLibrary;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox cmbProject;
+        private System.Windows.Forms.ComboBox cmbProjectName;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dtpbugidentity;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.ComboBox cmbIdentityBy;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DateTimePicker dtpBugIdentityDate;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.RichTextBox txtCode1;
+        private System.Windows.Forms.Label txtcode;
     }
 }

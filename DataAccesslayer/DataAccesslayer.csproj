@@ -50,6 +50,8 @@
     <Compile Include="ProjectManagementClass.cs" />
     <Compile Include="ProjectMemberClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegBugSolutionClass.cs" />
+    <Compile Include="RegisterBugClass.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

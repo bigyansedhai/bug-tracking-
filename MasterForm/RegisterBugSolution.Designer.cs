@@ -31,36 +31,35 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.gbRegisterBugSolution = new System.Windows.Forms.Panel();
+            this.txtCode = new System.Windows.Forms.RichTextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.dtpDate = new System.Windows.Forms.DateTimePicker();
+            this.txtSolutionDetails = new System.Windows.Forms.TextBox();
+            this.cmbBugDetails = new System.Windows.Forms.ComboBox();
+            this.cmbProject = new System.Windows.Forms.ComboBox();
+            this.cmbBugSolvedBy = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbPictureIcon = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvRegBugSolution = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.gbRegisterBugSolution.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPictureIcon)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRegBugSolution)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -84,246 +83,263 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.gbRegisterBugSolution);
             this.groupBox1.Controls.Add(this.panel2);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.comboBox3);
-            this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(12, 115);
+            this.groupBox1.Location = new System.Drawing.Point(2, 115);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1025, 249);
+            this.groupBox1.Size = new System.Drawing.Size(1045, 333);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Register Bug Solution";
             // 
-            // label2
+            // gbRegisterBugSolution
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 38);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(140, 22);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Bug Solved By :";
+            this.gbRegisterBugSolution.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.gbRegisterBugSolution.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.gbRegisterBugSolution.Controls.Add(this.txtCode);
+            this.gbRegisterBugSolution.Controls.Add(this.label7);
+            this.gbRegisterBugSolution.Controls.Add(this.dtpDate);
+            this.gbRegisterBugSolution.Controls.Add(this.txtSolutionDetails);
+            this.gbRegisterBugSolution.Controls.Add(this.cmbBugDetails);
+            this.gbRegisterBugSolution.Controls.Add(this.cmbProject);
+            this.gbRegisterBugSolution.Controls.Add(this.cmbBugSolvedBy);
+            this.gbRegisterBugSolution.Controls.Add(this.label6);
+            this.gbRegisterBugSolution.Controls.Add(this.label5);
+            this.gbRegisterBugSolution.Controls.Add(this.label4);
+            this.gbRegisterBugSolution.Controls.Add(this.label3);
+            this.gbRegisterBugSolution.Controls.Add(this.label2);
+            this.gbRegisterBugSolution.Location = new System.Drawing.Point(-2, 22);
+            this.gbRegisterBugSolution.Name = "gbRegisterBugSolution";
+            this.gbRegisterBugSolution.Size = new System.Drawing.Size(577, 305);
+            this.gbRegisterBugSolution.TabIndex = 11;
             // 
-            // label3
+            // txtCode
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(6, 73);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 22);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Date :";
+            this.txtCode.Location = new System.Drawing.Point(176, 197);
+            this.txtCode.Name = "txtCode";
+            this.txtCode.Size = new System.Drawing.Size(394, 101);
+            this.txtCode.TabIndex = 21;
+            this.txtCode.Text = "";
             // 
-            // label4
+            // label7
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(6, 108);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(78, 22);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Project :";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(8, 235);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(68, 22);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "Code  :";
             // 
-            // label5
+            // dtpDate
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(6, 145);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(114, 22);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Bug Details :";
+            this.dtpDate.Location = new System.Drawing.Point(176, 40);
+            this.dtpDate.Name = "dtpDate";
+            this.dtpDate.Size = new System.Drawing.Size(306, 22);
+            this.dtpDate.TabIndex = 19;
+            this.dtpDate.ValueChanged += new System.EventHandler(this.dtpDate_ValueChanged);
+            // 
+            // txtSolutionDetails
+            // 
+            this.txtSolutionDetails.Location = new System.Drawing.Point(176, 146);
+            this.txtSolutionDetails.Multiline = true;
+            this.txtSolutionDetails.Name = "txtSolutionDetails";
+            this.txtSolutionDetails.Size = new System.Drawing.Size(306, 45);
+            this.txtSolutionDetails.TabIndex = 18;
+            // 
+            // cmbBugDetails
+            // 
+            this.cmbBugDetails.FormattingEnabled = true;
+            this.cmbBugDetails.Location = new System.Drawing.Point(176, 116);
+            this.cmbBugDetails.Name = "cmbBugDetails";
+            this.cmbBugDetails.Size = new System.Drawing.Size(306, 24);
+            this.cmbBugDetails.TabIndex = 17;
+            this.cmbBugDetails.SelectedIndexChanged += new System.EventHandler(this.cmbBugDetails_SelectedIndexChanged);
+            // 
+            // cmbProject
+            // 
+            this.cmbProject.FormattingEnabled = true;
+            this.cmbProject.Location = new System.Drawing.Point(176, 76);
+            this.cmbProject.Name = "cmbProject";
+            this.cmbProject.Size = new System.Drawing.Size(306, 24);
+            this.cmbProject.TabIndex = 16;
+            this.cmbProject.SelectedIndexChanged += new System.EventHandler(this.cmbProject_SelectedIndexChanged);
+            // 
+            // cmbBugSolvedBy
+            // 
+            this.cmbBugSolvedBy.FormattingEnabled = true;
+            this.cmbBugSolvedBy.Location = new System.Drawing.Point(176, 9);
+            this.cmbBugSolvedBy.Name = "cmbBugSolvedBy";
+            this.cmbBugSolvedBy.Size = new System.Drawing.Size(306, 24);
+            this.cmbBugSolvedBy.TabIndex = 15;
+            this.cmbBugSolvedBy.SelectedIndexChanged += new System.EventHandler(this.cmbBugSolvedBy_SelectedIndexChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(6, 185);
+            this.label6.Location = new System.Drawing.Point(8, 155);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(149, 22);
-            this.label6.TabIndex = 4;
+            this.label6.TabIndex = 14;
             this.label6.Text = "Solution Details :";
             // 
-            // comboBox1
+            // label5
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(174, 39);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(306, 24);
-            this.comboBox1.TabIndex = 5;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(8, 115);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(114, 22);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Bug Details :";
             // 
-            // comboBox2
+            // label4
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(174, 106);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(306, 24);
-            this.comboBox2.TabIndex = 6;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(8, 78);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(78, 22);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Project :";
             // 
-            // comboBox3
+            // label3
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(174, 146);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(306, 24);
-            this.comboBox3.TabIndex = 7;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(8, 43);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(58, 22);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Date :";
             // 
-            // textBox1
+            // label2
             // 
-            this.textBox1.Location = new System.Drawing.Point(174, 184);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(306, 57);
-            this.textBox1.TabIndex = 8;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(174, 70);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(306, 22);
-            this.dateTimePicker1.TabIndex = 9;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(8, 8);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(140, 22);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Bug Solved By :";
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Location = new System.Drawing.Point(592, 39);
+            this.panel2.Controls.Add(this.pbPictureIcon);
+            this.panel2.Location = new System.Drawing.Point(581, 22);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(427, 202);
+            this.panel2.Size = new System.Drawing.Size(438, 305);
             this.panel2.TabIndex = 10;
             // 
-            // pictureBox1
+            // pbPictureIcon
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(427, 202);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pbPictureIcon.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pbPictureIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbPictureIcon.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pbPictureIcon.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbPictureIcon.Location = new System.Drawing.Point(0, 0);
+            this.pbPictureIcon.Name = "pbPictureIcon";
+            this.pbPictureIcon.Size = new System.Drawing.Size(438, 305);
+            this.pbPictureIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbPictureIcon.TabIndex = 0;
+            this.pbPictureIcon.TabStop = false;
+            this.pbPictureIcon.Click += new System.EventHandler(this.pbPictureIcon_Click);
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel3.Controls.Add(this.button3);
-            this.panel3.Controls.Add(this.button5);
-            this.panel3.Controls.Add(this.button4);
-            this.panel3.Location = new System.Drawing.Point(13, 383);
+            this.panel3.Controls.Add(this.btnDelete);
+            this.panel3.Controls.Add(this.btnAdd);
+            this.panel3.Controls.Add(this.btnUpdate);
+            this.panel3.Location = new System.Drawing.Point(2, 454);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1018, 55);
+            this.panel3.Size = new System.Drawing.Size(1045, 55);
             this.panel3.TabIndex = 2;
             // 
-            // button5
+            // btnDelete
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(20, 14);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(197, 34);
-            this.button5.TabIndex = 30;
-            this.button5.Text = "Add";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnDelete.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Location = new System.Drawing.Point(614, 13);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(197, 35);
+            this.btnDelete.TabIndex = 32;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // button3
+            // btnAdd
             // 
-            this.button3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(614, 13);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(197, 35);
-            this.button3.TabIndex = 32;
-            this.button3.Text = "Delete";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Location = new System.Drawing.Point(20, 14);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(197, 34);
+            this.btnAdd.TabIndex = 30;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // button4
+            // btnUpdate
             // 
-            this.button4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(309, 13);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(197, 35);
-            this.button4.TabIndex = 31;
-            this.button4.Text = "Update";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnUpdate.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.Location = new System.Drawing.Point(309, 13);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(197, 35);
+            this.btnUpdate.TabIndex = 31;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel4.Controls.Add(this.dataGridView1);
+            this.panel4.Controls.Add(this.dgvRegBugSolution);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 444);
+            this.panel4.Location = new System.Drawing.Point(0, 513);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1049, 240);
             this.panel4.TabIndex = 3;
             // 
-            // dataGridView1
+            // dgvRegBugSolution
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1045, 236);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Bug Solved By";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Date";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Project";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Bug Details";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Solution Details";
-            this.Column5.Name = "Column5";
+            this.dgvRegBugSolution.AllowUserToAddRows = false;
+            this.dgvRegBugSolution.AllowUserToDeleteRows = false;
+            this.dgvRegBugSolution.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvRegBugSolution.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRegBugSolution.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvRegBugSolution.Location = new System.Drawing.Point(0, 0);
+            this.dgvRegBugSolution.Name = "dgvRegBugSolution";
+            this.dgvRegBugSolution.ReadOnly = true;
+            this.dgvRegBugSolution.RowTemplate.Height = 24;
+            this.dgvRegBugSolution.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvRegBugSolution.Size = new System.Drawing.Size(1045, 236);
+            this.dgvRegBugSolution.TabIndex = 0;
+            this.dgvRegBugSolution.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRegBugSolution_CellClick);
+            this.dgvRegBugSolution.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRegBugSolution_CellContentClick);
             // 
             // RegisterBugSolution
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1049, 684);
+            this.ClientSize = new System.Drawing.Size(1049, 753);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.Name = "RegisterBugSolution";
             this.Text = "RegisterBugSolution";
+            this.Load += new System.EventHandler(this.RegisterBugSolution_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gbRegisterBugSolution.ResumeLayout(false);
+            this.gbRegisterBugSolution.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPictureIcon)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRegBugSolution)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -334,27 +350,25 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.PictureBox pbPictureIcon;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.DataGridView dgvRegBugSolution;
+        private System.Windows.Forms.Panel gbRegisterBugSolution;
+        private System.Windows.Forms.DateTimePicker dtpDate;
+        private System.Windows.Forms.ComboBox cmbBugDetails;
+        private System.Windows.Forms.ComboBox cmbProject;
+        private System.Windows.Forms.ComboBox cmbBugSolvedBy;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.RichTextBox txtCode;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtSolutionDetails;
     }
 }

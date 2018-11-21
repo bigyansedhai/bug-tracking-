@@ -37,8 +37,7 @@ namespace MasterForm
         {
             
         }
-
-        private void btnAdd_Click(object sender, EventArgs e)
+        public void AddManageRole()
         {
             try
             {
@@ -47,13 +46,38 @@ namespace MasterForm
                 {
                     MessageBox.Show("NEW USER ROLE HAS BEEN ADDED");
                     dgvManageRole.DataSource = m.getAllUserRoles();
-                    //  AssistantClass.makeFieldsBlank(pnlManageUserRole);
+                    Assitantclass.makeFieldsBlank(pnlManageUserRole);
                 }
                 else
                 {
                     MessageBox.Show("ERROR IN ADDING USER ROLE");
-                   dgvManageRole.DataSource = m.getAllUserRoles();
-                  //  AssistantClass.makeFieldsBlank(pnlManageUserRole);
+                    dgvManageRole.DataSource = m.getAllUserRoles();
+                    Assitantclass.makeFieldsBlank(pnlManageUserRole);
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtUserRole.Text == "")
+                {
+                    MessageBox.Show("Please provide ManageRole");
+                    txtUserRole.Focus();
+                }
+                else if (txtDescription.Text=="")
+                {
+                    MessageBox.Show("Please fii the Description TextBox");
+                    txtDescription.Focus();
+                }
+                else
+                {
+                    AddManageRole();
                 }
             }
             catch (Exception ex)
@@ -63,23 +87,50 @@ namespace MasterForm
             }
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
 
+        public void UpdateManageRole()
+        {
             try
             {
                 bool result = blc.ManageRole(id, txtUserRole.Text, txtDescription.Text, 2);
                 if (result == true)
                 {
                     MessageBox.Show("NEW USER ROLE HAS BEEN updated");
-                   dgvManageRole.DataSource = m.getAllUserRoles();
-                    //AssistantClass.makeFieldsBlank(pnlManageUserRole);
+                    dgvManageRole.DataSource = m.getAllUserRoles();
+                    Assitantclass.makeFieldsBlank(pnlManageUserRole);
+
                 }
                 else
                 {
                     MessageBox.Show("ERROR IN ADDING USER ROLE");
                     dgvManageRole.DataSource = m.getAllUserRoles();
-                    //  AssistantClass.makeFieldsBlank(pnlManageUserRole);
+                    Assitantclass.makeFieldsBlank(pnlManageUserRole);
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                if (txtUserRole.Text == "")
+                {
+                    MessageBox.Show("Please fill the ManageRole");
+                    txtUserRole.Focus();
+                }
+                else if (txtDescription.Text == "")
+                {
+                    MessageBox.Show("Please fii the Description TextBox");
+                    txtDescription.Focus();
+                }
+                else
+                {
+                    UpdateManageRole();
                 }
             }
             catch (Exception ex)
@@ -101,7 +152,7 @@ namespace MasterForm
             dgvManageRole.DataSource = m.getAllUserRoles();
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
+        public void DeleteManageRole()
         {
             try
             {
@@ -110,19 +161,45 @@ namespace MasterForm
                 {
                     MessageBox.Show("user Successfully deleted");
                     dgvManageRole.DataSource = m.getAllUserRoles();
-                    //  AssistantClass.makeFieldsBlank(pnlManageUserRole);
+                    Assitantclass.makeFieldsBlank(pnlManageUserRole);
                 }
                 else
                 {
                     MessageBox.Show("ERROR IN ADDING USER ROLE");
-                    // dgvUserTypeInfo.DataSource = userRoleClass.getAllUserRoles();
-                    //  AssistantClass.makeFieldsBlank(pnlManageUserRole);
+                    dgvManageRole.DataSource = m.getAllUserRoles();
+                    Assitantclass.makeFieldsBlank(pnlManageUserRole);
                 }
             }
             catch (Exception ex)
             {
 
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if(txtUserRole.Text=="")
+                {
+                    MessageBox.Show("Please fill the ManageRole BOX");
+                    txtUserRole.Focus();
+                }
+                else if(txtDescription.Text=="")
+                {
+                    MessageBox.Show("Plese fill the DescriptionBox ");
+                    txtDescription.Focus();
+                }
+                else
+                {
+                    DeleteManageRole();
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
             }
         }
     }

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DataAccesslayer;
+using BussinessLogiclayer;
 
 namespace MasterForm
 {
@@ -16,6 +18,12 @@ namespace MasterForm
         {
             InitializeComponent();
         }
+        BussinessLogicClass blc = new BussinessLogicClass();
+        MemberClass mcl = new MemberClass();
+        ProjectManagementClass pmc = new ProjectManagementClass();
+        ProjectMemberClass pm = new ProjectMemberClass();
+        RegisterBugClass rbc = new RegisterBugClass();
+        RegBugSolutionClass rbs = new RegBugSolutionClass();
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
@@ -35,6 +43,21 @@ namespace MasterForm
         private void MainForm_Load(object sender, EventArgs e)
         {
             lbldate.Text = DateTime.Now.ToString();
+
+             try
+            {
+                
+                
+                lblTotalProject.Text = pmc.countNumberOfProjects().ToString();
+                lbltmem.Text = mcl.totalMember().ToString();
+                lblTotalBugResigter.Text = rbc.getAllBugs().Rows.Count.ToString();
+                lblTotalFixed.Text = rbs.getAllBugSolutions().Rows.Count.ToString();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void manageUserRoleToolStripMenuItem_Click(object sender, EventArgs e)

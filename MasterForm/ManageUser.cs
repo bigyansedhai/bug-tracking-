@@ -36,7 +36,7 @@ namespace MasterForm
             cmbUserRole.SelectedIndex = -1;
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        public void AddManageUser()
         {
             try
             {
@@ -45,13 +45,48 @@ namespace MasterForm
                 {
                     MessageBox.Show("NEW USER HAS BEEN ADDED");
                     dgvManageUser.DataSource = muc.getAllUsers();
-                   Assitantclass.makeFieldsBlank(pnlUserInfo);
+                    Assitantclass.makeFieldsBlank(pnlUserInfo);
                 }
                 else
                 {
                     MessageBox.Show("ERROR ON ADDING NEW USER");
                     dgvManageUser.DataSource = muc.getAllUsers();
                     Assitantclass.makeFieldsBlank(pnlUserInfo);
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cmbUserRole.SelectedIndex < 0)
+                {
+                    MessageBox.Show("Please provide ManageRole");
+                    cmbUserRole.Focus();
+                }
+                else if (cmbfirstname.SelectedIndex < 0)
+                {
+                    MessageBox.Show("Please fii the Description TextBox");
+                    cmbfirstname.Focus();
+                }
+                else if(txtusername.Text =="")
+                {
+                    MessageBox.Show("Please Fillup Of the UserNameBox");
+                    txtusername.Focus();
+                }
+                else if(txtpassword.Text=="")
+                {
+                    MessageBox.Show("please fill the Password Box");
+                    txtpassword.Focus();
+                }
+                else
+                {
+                    AddManageUser();
                 }
             }
             catch (Exception ex)

@@ -96,7 +96,7 @@ namespace DataAccesslayer
             finally { conn.Close(); }
         }
         public int totalMember()
-        {
+        { 
             try
             {
                 DataTable dt = new DataTable();

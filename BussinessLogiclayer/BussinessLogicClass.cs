@@ -15,6 +15,8 @@ namespace BussinessLogiclayer
         MemberClass mcl = new MemberClass();
         ProjectMemberClass pm = new ProjectMemberClass();
         ProjectManagementClass pmc = new ProjectManagementClass();
+        RegisterBugClass rbc = new RegisterBugClass();
+        RegBugSolutionClass rbs = new RegBugSolutionClass();
 
 
 
@@ -80,7 +82,7 @@ namespace BussinessLogiclayer
         {
             try
             {
-                int rs = mcl.ManageMembers(memberId, memberName, memberAddress,contactNumber,emailAddress,gender,dateOfBirth,dateOfJoin,memberDesignation,profilePicture,Mode);
+                int rs = mcl.ManageMembers(memberId, memberName, memberAddress, contactNumber, emailAddress, gender, dateOfBirth, dateOfJoin, memberDesignation, profilePicture, Mode);
                 if (rs > 0)
                     return true;
                 else
@@ -136,7 +138,58 @@ namespace BussinessLogiclayer
                 throw;
             }
         }
+        public bool manageBugs(int bugId,
+           DateTime bugIdentifiedDate,
+           int memberId,
+           int projectId,
+           String classLibraryName,
+           String className,
+           String methodName,
+           String blockName,
+           String lineNumber,
+           String bugDetails,
+           byte[] pbPictureImage,
+           String codeContainingBug,
+           int mode)
+        {
+            try
+            {
+                int rs = rbc.manageBugs(bugId, bugIdentifiedDate, memberId, projectId, classLibraryName, className, methodName, blockName, lineNumber, bugDetails, pbPictureImage, codeContainingBug, mode);
+                if (rs > 0)
+                    return true;
+                else
+                    return false;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+        public bool manageBugSolutions(int bugSolutionId,
+           DateTime dateOfSolutionIdentified,
+           int projectId,
+           int bugId,
+           int memberId,
+           string solutionDetails,
+           string codeAfterFixingBug,
+           int mode)
+        {
+            try
+            {
+                int rs = rbs.manageBugSolutions(bugSolutionId, dateOfSolutionIdentified, projectId, bugId, memberId, solutionDetails, codeAfterFixingBug, mode);
+                if (rs > 0)
+                    return true;
+                else return false;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
     }
+
 }
 
     //public bool ManageRole(int userRoleId,

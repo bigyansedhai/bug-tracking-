@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataAccesslayer
 {
-    class ConnectionClass
+    public class ConnectionClass
     {
         public static String ConnectionString
         { get { return System.Configuration.ConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString; } }

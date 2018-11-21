@@ -99,9 +99,9 @@
             // 
             this.pbProfilePicture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbProfilePicture.BackgroundImage")));
             this.pbProfilePicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbProfilePicture.Location = new System.Drawing.Point(3, 5);
+            this.pbProfilePicture.Location = new System.Drawing.Point(3, 3);
             this.pbProfilePicture.Name = "pbProfilePicture";
-            this.pbProfilePicture.Size = new System.Drawing.Size(227, 157);
+            this.pbProfilePicture.Size = new System.Drawing.Size(227, 159);
             this.pbProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbProfilePicture.TabIndex = 0;
             this.pbProfilePicture.TabStop = false;

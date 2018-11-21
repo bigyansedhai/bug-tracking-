@@ -30,19 +30,20 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnLogOut = new System.Windows.Forms.Button();
+            this.BtnClone = new System.Windows.Forms.Button();
+            this.btnBugHis = new System.Windows.Forms.Button();
+            this.btnBugSol = new System.Windows.Forms.Button();
+            this.btnNewbug = new System.Windows.Forms.Button();
+            this.btnProjectManage = new System.Windows.Forms.Button();
+            this.btnProjectMember = new System.Windows.Forms.Button();
+            this.btnManageMember = new System.Windows.Forms.Button();
+            this.btnManageUser = new System.Windows.Forms.Button();
+            this.btnManageUserRole = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lbldate = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -58,22 +59,21 @@
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblTotalFixed = new System.Windows.Forms.Label();
+            this.lblTotalBugResigter = new System.Windows.Forms.Label();
+            this.lbltmem = new System.Windows.Forms.Label();
+            this.lblTotalProject = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -89,6 +89,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1492, 60);
             this.panel1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(-1, -1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(142, 57);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // dateTimePicker1
             // 
@@ -113,16 +123,16 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.button11);
-            this.panel2.Controls.Add(this.button10);
-            this.panel2.Controls.Add(this.button9);
-            this.panel2.Controls.Add(this.button8);
-            this.panel2.Controls.Add(this.button7);
-            this.panel2.Controls.Add(this.button6);
-            this.panel2.Controls.Add(this.button5);
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.btnLogOut);
+            this.panel2.Controls.Add(this.BtnClone);
+            this.panel2.Controls.Add(this.btnBugHis);
+            this.panel2.Controls.Add(this.btnBugSol);
+            this.panel2.Controls.Add(this.btnNewbug);
+            this.panel2.Controls.Add(this.btnProjectManage);
+            this.panel2.Controls.Add(this.btnProjectMember);
+            this.panel2.Controls.Add(this.btnManageMember);
+            this.panel2.Controls.Add(this.btnManageUser);
+            this.panel2.Controls.Add(this.btnManageUserRole);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 60);
             this.panel2.Name = "panel2";
@@ -130,114 +140,114 @@
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // button11
+            // btnLogOut
             // 
-            this.button11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button11.BackgroundImage")));
-            this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button11.Location = new System.Drawing.Point(-2, 648);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(144, 85);
-            this.button11.TabIndex = 9;
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
+            this.btnLogOut.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLogOut.BackgroundImage")));
+            this.btnLogOut.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLogOut.Location = new System.Drawing.Point(-2, 648);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(144, 85);
+            this.btnLogOut.TabIndex = 9;
+            this.btnLogOut.UseVisualStyleBackColor = true;
+            this.btnLogOut.Click += new System.EventHandler(this.button11_Click);
             // 
-            // button10
+            // BtnClone
             // 
-            this.button10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button10.BackgroundImage")));
-            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button10.Location = new System.Drawing.Point(0, 573);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(141, 72);
-            this.button10.TabIndex = 8;
-            this.button10.UseVisualStyleBackColor = true;
+            this.BtnClone.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnClone.BackgroundImage")));
+            this.BtnClone.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnClone.Location = new System.Drawing.Point(0, 573);
+            this.BtnClone.Name = "BtnClone";
+            this.BtnClone.Size = new System.Drawing.Size(141, 72);
+            this.BtnClone.TabIndex = 8;
+            this.BtnClone.UseVisualStyleBackColor = true;
             // 
-            // button9
+            // btnBugHis
             // 
-            this.button9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button9.BackgroundImage")));
-            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button9.Location = new System.Drawing.Point(-3, 495);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(145, 77);
-            this.button9.TabIndex = 8;
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            this.btnBugHis.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBugHis.BackgroundImage")));
+            this.btnBugHis.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBugHis.Location = new System.Drawing.Point(-3, 495);
+            this.btnBugHis.Name = "btnBugHis";
+            this.btnBugHis.Size = new System.Drawing.Size(145, 77);
+            this.btnBugHis.TabIndex = 8;
+            this.btnBugHis.UseVisualStyleBackColor = true;
+            this.btnBugHis.Click += new System.EventHandler(this.button9_Click);
             // 
-            // button8
+            // btnBugSol
             // 
-            this.button8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button8.BackgroundImage")));
-            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button8.Location = new System.Drawing.Point(0, 427);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(142, 67);
-            this.button8.TabIndex = 7;
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.btnBugSol.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBugSol.BackgroundImage")));
+            this.btnBugSol.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBugSol.Location = new System.Drawing.Point(0, 427);
+            this.btnBugSol.Name = "btnBugSol";
+            this.btnBugSol.Size = new System.Drawing.Size(142, 67);
+            this.btnBugSol.TabIndex = 7;
+            this.btnBugSol.UseVisualStyleBackColor = true;
+            this.btnBugSol.Click += new System.EventHandler(this.button8_Click);
             // 
-            // button7
+            // btnNewbug
             // 
-            this.button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button7.BackgroundImage")));
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button7.Location = new System.Drawing.Point(0, 355);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(142, 71);
-            this.button7.TabIndex = 6;
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.btnNewbug.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNewbug.BackgroundImage")));
+            this.btnNewbug.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnNewbug.Location = new System.Drawing.Point(0, 355);
+            this.btnNewbug.Name = "btnNewbug";
+            this.btnNewbug.Size = new System.Drawing.Size(142, 71);
+            this.btnNewbug.TabIndex = 6;
+            this.btnNewbug.UseVisualStyleBackColor = true;
+            this.btnNewbug.Click += new System.EventHandler(this.button7_Click);
             // 
-            // button6
+            // btnProjectManage
             // 
-            this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button6.Location = new System.Drawing.Point(0, 287);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(142, 67);
-            this.button6.TabIndex = 5;
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.btnProjectManage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnProjectManage.BackgroundImage")));
+            this.btnProjectManage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnProjectManage.Location = new System.Drawing.Point(0, 287);
+            this.btnProjectManage.Name = "btnProjectManage";
+            this.btnProjectManage.Size = new System.Drawing.Size(142, 67);
+            this.btnProjectManage.TabIndex = 5;
+            this.btnProjectManage.UseVisualStyleBackColor = true;
+            this.btnProjectManage.Click += new System.EventHandler(this.button6_Click);
             // 
-            // button5
+            // btnProjectMember
             // 
-            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button5.Location = new System.Drawing.Point(0, 219);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(142, 68);
-            this.button5.TabIndex = 4;
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.btnProjectMember.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnProjectMember.BackgroundImage")));
+            this.btnProjectMember.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnProjectMember.Location = new System.Drawing.Point(0, 219);
+            this.btnProjectMember.Name = "btnProjectMember";
+            this.btnProjectMember.Size = new System.Drawing.Size(142, 68);
+            this.btnProjectMember.TabIndex = 4;
+            this.btnProjectMember.UseVisualStyleBackColor = true;
+            this.btnProjectMember.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button4
+            // btnManageMember
             // 
-            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.Location = new System.Drawing.Point(0, 143);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(140, 77);
-            this.button4.TabIndex = 3;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnManageMember.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnManageMember.BackgroundImage")));
+            this.btnManageMember.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnManageMember.Location = new System.Drawing.Point(0, 143);
+            this.btnManageMember.Name = "btnManageMember";
+            this.btnManageMember.Size = new System.Drawing.Size(140, 77);
+            this.btnManageMember.TabIndex = 3;
+            this.btnManageMember.UseVisualStyleBackColor = true;
+            this.btnManageMember.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button3
+            // btnManageUser
             // 
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.Location = new System.Drawing.Point(0, 72);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(142, 72);
-            this.button3.TabIndex = 2;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnManageUser.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnManageUser.BackgroundImage")));
+            this.btnManageUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnManageUser.Location = new System.Drawing.Point(0, 72);
+            this.btnManageUser.Name = "btnManageUser";
+            this.btnManageUser.Size = new System.Drawing.Size(142, 72);
+            this.btnManageUser.TabIndex = 2;
+            this.btnManageUser.UseVisualStyleBackColor = true;
+            this.btnManageUser.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button2
+            // btnManageUserRole
             // 
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Location = new System.Drawing.Point(-3, 1);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(145, 72);
-            this.button2.TabIndex = 1;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnManageUserRole.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnManageUserRole.BackgroundImage")));
+            this.btnManageUserRole.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnManageUserRole.Location = new System.Drawing.Point(-3, 1);
+            this.btnManageUserRole.Name = "btnManageUserRole";
+            this.btnManageUserRole.Size = new System.Drawing.Size(145, 72);
+            this.btnManageUserRole.TabIndex = 1;
+            this.btnManageUserRole.UseVisualStyleBackColor = true;
+            this.btnManageUserRole.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel3
             // 
@@ -319,66 +329,66 @@
             // manageMemberToolStripMenuItem
             // 
             this.manageMemberToolStripMenuItem.Name = "manageMemberToolStripMenuItem";
-            this.manageMemberToolStripMenuItem.Size = new System.Drawing.Size(135, 24);
+            this.manageMemberToolStripMenuItem.Size = new System.Drawing.Size(134, 21);
             this.manageMemberToolStripMenuItem.Text = "Manage Member";
             this.manageMemberToolStripMenuItem.Click += new System.EventHandler(this.manageMemberToolStripMenuItem_Click);
             // 
             // manageProjectToolStripMenuItem
             // 
             this.manageProjectToolStripMenuItem.Name = "manageProjectToolStripMenuItem";
-            this.manageProjectToolStripMenuItem.Size = new System.Drawing.Size(131, 24);
+            this.manageProjectToolStripMenuItem.Size = new System.Drawing.Size(132, 21);
             this.manageProjectToolStripMenuItem.Text = "Project  Member";
             this.manageProjectToolStripMenuItem.Click += new System.EventHandler(this.manageProjectToolStripMenuItem_Click);
             // 
             // registerNewBugToolStripMenuItem
             // 
             this.registerNewBugToolStripMenuItem.Name = "registerNewBugToolStripMenuItem";
-            this.registerNewBugToolStripMenuItem.Size = new System.Drawing.Size(163, 24);
+            this.registerNewBugToolStripMenuItem.Size = new System.Drawing.Size(161, 21);
             this.registerNewBugToolStripMenuItem.Text = "Project  Management";
             this.registerNewBugToolStripMenuItem.Click += new System.EventHandler(this.registerNewBugToolStripMenuItem_Click);
             // 
             // registerBugSolutionToolStripMenuItem
             // 
             this.registerBugSolutionToolStripMenuItem.Name = "registerBugSolutionToolStripMenuItem";
-            this.registerBugSolutionToolStripMenuItem.Size = new System.Drawing.Size(139, 24);
+            this.registerBugSolutionToolStripMenuItem.Size = new System.Drawing.Size(141, 21);
             this.registerBugSolutionToolStripMenuItem.Text = "Register New Bug";
             this.registerBugSolutionToolStripMenuItem.Click += new System.EventHandler(this.registerBugSolutionToolStripMenuItem_Click);
             // 
             // bugHistoryToolStripMenuItem
             // 
             this.bugHistoryToolStripMenuItem.Name = "bugHistoryToolStripMenuItem";
-            this.bugHistoryToolStripMenuItem.Size = new System.Drawing.Size(164, 24);
+            this.bugHistoryToolStripMenuItem.Size = new System.Drawing.Size(165, 21);
             this.bugHistoryToolStripMenuItem.Text = "Register Bug Solution";
             this.bugHistoryToolStripMenuItem.Click += new System.EventHandler(this.bugHistoryToolStripMenuItem_Click);
             // 
             // cloneToBitBucketToolStripMenuItem
             // 
             this.cloneToBitBucketToolStripMenuItem.Name = "cloneToBitBucketToolStripMenuItem";
-            this.cloneToBitBucketToolStripMenuItem.Size = new System.Drawing.Size(98, 24);
+            this.cloneToBitBucketToolStripMenuItem.Size = new System.Drawing.Size(100, 21);
             this.cloneToBitBucketToolStripMenuItem.Text = "Bug History";
             this.cloneToBitBucketToolStripMenuItem.Click += new System.EventHandler(this.cloneToBitBucketToolStripMenuItem_Click);
             // 
             // logOutToolStripMenuItem
             // 
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(145, 24);
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(152, 21);
             this.logOutToolStripMenuItem.Text = "Clone To BitBucket";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
             // logOutToolStripMenuItem1
             // 
             this.logOutToolStripMenuItem1.Name = "logOutToolStripMenuItem1";
-            this.logOutToolStripMenuItem1.Size = new System.Drawing.Size(74, 24);
+            this.logOutToolStripMenuItem1.Size = new System.Drawing.Size(75, 21);
             this.logOutToolStripMenuItem1.Text = "Log Out";
             this.logOutToolStripMenuItem1.Click += new System.EventHandler(this.logOutToolStripMenuItem1_Click);
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Maroon;
-            this.panel5.Controls.Add(this.label9);
-            this.panel5.Controls.Add(this.label8);
-            this.panel5.Controls.Add(this.label7);
-            this.panel5.Controls.Add(this.label6);
+            this.panel5.Controls.Add(this.lblTotalFixed);
+            this.panel5.Controls.Add(this.lblTotalBugResigter);
+            this.panel5.Controls.Add(this.lbltmem);
+            this.panel5.Controls.Add(this.lblTotalProject);
             this.panel5.Controls.Add(this.label5);
             this.panel5.Controls.Add(this.label4);
             this.panel5.Controls.Add(this.label3);
@@ -389,49 +399,49 @@
             this.panel5.Size = new System.Drawing.Size(1350, 287);
             this.panel5.TabIndex = 4;
             // 
-            // label9
+            // lblTotalFixed
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label9.Location = new System.Drawing.Point(789, 147);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(20, 23);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "0";
+            this.lblTotalFixed.AutoSize = true;
+            this.lblTotalFixed.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalFixed.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblTotalFixed.Location = new System.Drawing.Point(789, 147);
+            this.lblTotalFixed.Name = "lblTotalFixed";
+            this.lblTotalFixed.Size = new System.Drawing.Size(20, 23);
+            this.lblTotalFixed.TabIndex = 8;
+            this.lblTotalFixed.Text = "0";
             // 
-            // label8
+            // lblTotalBugResigter
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label8.Location = new System.Drawing.Point(789, 73);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(20, 23);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "0";
+            this.lblTotalBugResigter.AutoSize = true;
+            this.lblTotalBugResigter.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalBugResigter.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblTotalBugResigter.Location = new System.Drawing.Point(789, 73);
+            this.lblTotalBugResigter.Name = "lblTotalBugResigter";
+            this.lblTotalBugResigter.Size = new System.Drawing.Size(20, 23);
+            this.lblTotalBugResigter.TabIndex = 7;
+            this.lblTotalBugResigter.Text = "0";
             // 
-            // label7
+            // lbltmem
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(304, 147);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(20, 23);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "0";
+            this.lbltmem.AutoSize = true;
+            this.lbltmem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltmem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbltmem.Location = new System.Drawing.Point(304, 147);
+            this.lbltmem.Name = "lbltmem";
+            this.lbltmem.Size = new System.Drawing.Size(20, 23);
+            this.lbltmem.TabIndex = 6;
+            this.lbltmem.Text = "0";
             // 
-            // label6
+            // lblTotalProject
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(304, 73);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(20, 23);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "0";
+            this.lblTotalProject.AutoSize = true;
+            this.lblTotalProject.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalProject.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblTotalProject.Location = new System.Drawing.Point(304, 73);
+            this.lblTotalProject.Name = "lblTotalProject";
+            this.lblTotalProject.Size = new System.Drawing.Size(20, 23);
+            this.lblTotalProject.TabIndex = 5;
+            this.lblTotalProject.Text = "0";
             // 
             // label5
             // 
@@ -473,16 +483,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Total Project :";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(-1, -1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(142, 57);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
             // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -508,6 +508,7 @@
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -517,7 +518,6 @@
             this.menuStrip1.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -527,17 +527,17 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnManageUserRole;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnManageUser;
+        private System.Windows.Forms.Button btnLogOut;
+        private System.Windows.Forms.Button BtnClone;
+        private System.Windows.Forms.Button btnBugHis;
+        private System.Windows.Forms.Button btnBugSol;
+        private System.Windows.Forms.Button btnNewbug;
+        private System.Windows.Forms.Button btnProjectManage;
+        private System.Windows.Forms.Button btnProjectMember;
+        private System.Windows.Forms.Button btnManageMember;
         private System.Windows.Forms.Label lbldate;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.MenuStrip menuStrip1;
@@ -551,10 +551,10 @@
         private System.Windows.Forms.ToolStripMenuItem cloneToBitBucketToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblTotalFixed;
+        private System.Windows.Forms.Label lblTotalBugResigter;
+        private System.Windows.Forms.Label lbltmem;
+        private System.Windows.Forms.Label lblTotalProject;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
