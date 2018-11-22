@@ -400,7 +400,6 @@
         private System.Windows.Forms.TextBox txtEmailAddress;
         private System.Windows.Forms.TextBox txtConatctNumber;
         private System.Windows.Forms.TextBox txtMemberAddress;
-        private System.Windows.Forms.TextBox txtMemberName;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -409,5 +408,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        public System.Windows.Forms.TextBox txtMemberName;
     }
 }

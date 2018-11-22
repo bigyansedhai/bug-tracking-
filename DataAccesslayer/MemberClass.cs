@@ -77,7 +77,7 @@ namespace DataAccesslayer
             try
             {
                 DataTable dt = new DataTable();
-                SqlCommand cmd = new SqlCommand("Select Role from MemberTable where UserName=@UserName and Password=@Password", conn);
+                SqlCommand cmd = new SqlCommand("Select Role from UserTable where UserName=@UserName and Password=@Password", conn);
                 cmd.CommandType = CommandType.Text;
                 cmd.Parameters.AddWithValue("@UserName", UserName);
                 cmd.Parameters.AddWithValue("@Password", Password);

@@ -45,6 +45,7 @@ namespace DataAccesslayer
                 conn.Close();
             }
         }
+        
 
         public DataTable getAllUserRoles()
         {
@@ -64,6 +65,27 @@ namespace DataAccesslayer
 
                 throw ex;
             }
+        }
+
+        public DataTable getRoleUser()
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                SqlCommand cmd = new SqlCommand("select * from UserRoleTable", conn);
+                
+                conn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                dt.Load(dr);
+                conn.Close();
+                return dt;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally { conn.Close(); }
         }
 
 

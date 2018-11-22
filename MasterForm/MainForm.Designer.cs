@@ -52,11 +52,12 @@
             this.manageUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageMemberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageProjectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registerNewBugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registerBugSolutionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bugHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cloneToBitBucketToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ProjectManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registernewbugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.RegBugSolToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.BugHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.CloneToBitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel5 = new System.Windows.Forms.Panel();
             this.lblTotalFixed = new System.Windows.Forms.Label();
@@ -87,7 +88,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1492, 60);
+            this.panel1.Size = new System.Drawing.Size(1583, 60);
             this.panel1.TabIndex = 0;
             // 
             // pictureBox1
@@ -144,12 +145,12 @@
             // 
             this.btnLogOut.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLogOut.BackgroundImage")));
             this.btnLogOut.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnLogOut.Location = new System.Drawing.Point(-2, 648);
+            this.btnLogOut.Location = new System.Drawing.Point(0, 648);
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(144, 85);
+            this.btnLogOut.Size = new System.Drawing.Size(142, 85);
             this.btnLogOut.TabIndex = 9;
             this.btnLogOut.UseVisualStyleBackColor = true;
-            this.btnLogOut.Click += new System.EventHandler(this.button11_Click);
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // BtnClone
             // 
@@ -160,17 +161,20 @@
             this.BtnClone.Size = new System.Drawing.Size(141, 72);
             this.BtnClone.TabIndex = 8;
             this.BtnClone.UseVisualStyleBackColor = true;
+            this.BtnClone.BackColorChanged += new System.EventHandler(this.cloneToBitBucketToolStripMenuItem_Click);
+            this.BtnClone.BackgroundImageChanged += new System.EventHandler(this.bugHistoryToolStripMenuItem_Click);
+            this.BtnClone.Click += new System.EventHandler(this.BtnClone_Click);
             // 
             // btnBugHis
             // 
             this.btnBugHis.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBugHis.BackgroundImage")));
             this.btnBugHis.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnBugHis.Location = new System.Drawing.Point(-3, 495);
+            this.btnBugHis.Location = new System.Drawing.Point(0, 495);
             this.btnBugHis.Name = "btnBugHis";
-            this.btnBugHis.Size = new System.Drawing.Size(145, 77);
+            this.btnBugHis.Size = new System.Drawing.Size(142, 77);
             this.btnBugHis.TabIndex = 8;
             this.btnBugHis.UseVisualStyleBackColor = true;
-            this.btnBugHis.Click += new System.EventHandler(this.button9_Click);
+            this.btnBugHis.Click += new System.EventHandler(this.btnBugHis_Click);
             // 
             // btnBugSol
             // 
@@ -181,7 +185,7 @@
             this.btnBugSol.Size = new System.Drawing.Size(142, 67);
             this.btnBugSol.TabIndex = 7;
             this.btnBugSol.UseVisualStyleBackColor = true;
-            this.btnBugSol.Click += new System.EventHandler(this.button8_Click);
+            this.btnBugSol.Click += new System.EventHandler(this.btnBugSol_Click);
             // 
             // btnNewbug
             // 
@@ -192,62 +196,62 @@
             this.btnNewbug.Size = new System.Drawing.Size(142, 71);
             this.btnNewbug.TabIndex = 6;
             this.btnNewbug.UseVisualStyleBackColor = true;
-            this.btnNewbug.Click += new System.EventHandler(this.button7_Click);
+            this.btnNewbug.Click += new System.EventHandler(this.btnNewbug_Click);
             // 
             // btnProjectManage
             // 
             this.btnProjectManage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnProjectManage.BackgroundImage")));
             this.btnProjectManage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnProjectManage.Location = new System.Drawing.Point(0, 287);
+            this.btnProjectManage.Location = new System.Drawing.Point(0, 284);
             this.btnProjectManage.Name = "btnProjectManage";
-            this.btnProjectManage.Size = new System.Drawing.Size(142, 67);
+            this.btnProjectManage.Size = new System.Drawing.Size(142, 70);
             this.btnProjectManage.TabIndex = 5;
             this.btnProjectManage.UseVisualStyleBackColor = true;
-            this.btnProjectManage.Click += new System.EventHandler(this.button6_Click);
+            this.btnProjectManage.Click += new System.EventHandler(this.btnProjectManage_Click);
             // 
             // btnProjectMember
             // 
             this.btnProjectMember.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnProjectMember.BackgroundImage")));
             this.btnProjectMember.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnProjectMember.Location = new System.Drawing.Point(0, 219);
+            this.btnProjectMember.Location = new System.Drawing.Point(0, 212);
             this.btnProjectMember.Name = "btnProjectMember";
-            this.btnProjectMember.Size = new System.Drawing.Size(142, 68);
+            this.btnProjectMember.Size = new System.Drawing.Size(142, 73);
             this.btnProjectMember.TabIndex = 4;
             this.btnProjectMember.UseVisualStyleBackColor = true;
-            this.btnProjectMember.Click += new System.EventHandler(this.button5_Click);
+            this.btnProjectMember.Click += new System.EventHandler(this.btnProjectMember_Click);
             // 
             // btnManageMember
             // 
             this.btnManageMember.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnManageMember.BackgroundImage")));
             this.btnManageMember.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnManageMember.Location = new System.Drawing.Point(0, 143);
+            this.btnManageMember.Location = new System.Drawing.Point(0, 140);
             this.btnManageMember.Name = "btnManageMember";
-            this.btnManageMember.Size = new System.Drawing.Size(140, 77);
+            this.btnManageMember.Size = new System.Drawing.Size(142, 73);
             this.btnManageMember.TabIndex = 3;
             this.btnManageMember.UseVisualStyleBackColor = true;
-            this.btnManageMember.Click += new System.EventHandler(this.button4_Click);
+            this.btnManageMember.Click += new System.EventHandler(this.btnManageMember_Click);
             // 
             // btnManageUser
             // 
             this.btnManageUser.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnManageUser.BackgroundImage")));
             this.btnManageUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnManageUser.Location = new System.Drawing.Point(0, 72);
+            this.btnManageUser.Location = new System.Drawing.Point(0, 67);
             this.btnManageUser.Name = "btnManageUser";
-            this.btnManageUser.Size = new System.Drawing.Size(142, 72);
+            this.btnManageUser.Size = new System.Drawing.Size(141, 72);
             this.btnManageUser.TabIndex = 2;
             this.btnManageUser.UseVisualStyleBackColor = true;
-            this.btnManageUser.Click += new System.EventHandler(this.button3_Click);
+            this.btnManageUser.Click += new System.EventHandler(this.btnManageUser_Click);
             // 
             // btnManageUserRole
             // 
             this.btnManageUserRole.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnManageUserRole.BackgroundImage")));
             this.btnManageUserRole.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnManageUserRole.Location = new System.Drawing.Point(-3, 1);
+            this.btnManageUserRole.Location = new System.Drawing.Point(0, 1);
             this.btnManageUserRole.Name = "btnManageUserRole";
-            this.btnManageUserRole.Size = new System.Drawing.Size(145, 72);
+            this.btnManageUserRole.Size = new System.Drawing.Size(142, 66);
             this.btnManageUserRole.TabIndex = 1;
             this.btnManageUserRole.UseVisualStyleBackColor = true;
-            this.btnManageUserRole.Click += new System.EventHandler(this.button2_Click);
+            this.btnManageUserRole.Click += new System.EventHandler(this.btnManageUserRole_Click);
             // 
             // panel3
             // 
@@ -256,7 +260,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(142, 706);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1350, 88);
+            this.panel3.Size = new System.Drawing.Size(1441, 88);
             this.panel3.TabIndex = 2;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
@@ -276,7 +280,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(142, 60);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1350, 43);
+            this.panel4.Size = new System.Drawing.Size(1441, 43);
             this.panel4.TabIndex = 3;
             // 
             // menuStrip1
@@ -295,16 +299,16 @@
             this.manageUserToolStripMenuItem,
             this.manageMemberToolStripMenuItem,
             this.manageProjectToolStripMenuItem,
-            this.registerNewBugToolStripMenuItem,
-            this.registerBugSolutionToolStripMenuItem,
-            this.bugHistoryToolStripMenuItem,
-            this.cloneToBitBucketToolStripMenuItem,
-            this.logOutToolStripMenuItem,
+            this.ProjectManagementToolStripMenuItem,
+            this.registernewbugToolStripMenuItem,
+            this.RegBugSolToolStripMenuItem,
+            this.BugHistoryToolStripMenuItem,
+            this.CloneToBitToolStripMenuItem,
             this.logOutToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1327, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(1303, 25);
             this.menuStrip1.Stretch = false;
             this.menuStrip1.TabIndex = 6;
             this.menuStrip1.Text = "menuStrip1";
@@ -317,6 +321,7 @@
             this.manageUserRoleToolStripMenuItem.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.manageUserRoleToolStripMenuItem.Size = new System.Drawing.Size(152, 21);
             this.manageUserRoleToolStripMenuItem.Text = "Manage User Role";
+            this.manageUserRoleToolStripMenuItem.ToolTipText = "Manage User Role";
             this.manageUserRoleToolStripMenuItem.Click += new System.EventHandler(this.manageUserRoleToolStripMenuItem_Click);
             // 
             // manageUserToolStripMenuItem
@@ -324,6 +329,7 @@
             this.manageUserToolStripMenuItem.Name = "manageUserToolStripMenuItem";
             this.manageUserToolStripMenuItem.Size = new System.Drawing.Size(109, 21);
             this.manageUserToolStripMenuItem.Text = "Manage User";
+            this.manageUserToolStripMenuItem.ToolTipText = "Manage User";
             this.manageUserToolStripMenuItem.Click += new System.EventHandler(this.manageUserToolStripMenuItem_Click);
             // 
             // manageMemberToolStripMenuItem
@@ -331,6 +337,7 @@
             this.manageMemberToolStripMenuItem.Name = "manageMemberToolStripMenuItem";
             this.manageMemberToolStripMenuItem.Size = new System.Drawing.Size(134, 21);
             this.manageMemberToolStripMenuItem.Text = "Manage Member";
+            this.manageMemberToolStripMenuItem.ToolTipText = "Manage Member";
             this.manageMemberToolStripMenuItem.Click += new System.EventHandler(this.manageMemberToolStripMenuItem_Click);
             // 
             // manageProjectToolStripMenuItem
@@ -338,48 +345,64 @@
             this.manageProjectToolStripMenuItem.Name = "manageProjectToolStripMenuItem";
             this.manageProjectToolStripMenuItem.Size = new System.Drawing.Size(132, 21);
             this.manageProjectToolStripMenuItem.Text = "Project  Member";
+            this.manageProjectToolStripMenuItem.ToolTipText = "Project  Member";
             this.manageProjectToolStripMenuItem.Click += new System.EventHandler(this.manageProjectToolStripMenuItem_Click);
             // 
-            // registerNewBugToolStripMenuItem
+            // ProjectManagementToolStripMenuItem
             // 
-            this.registerNewBugToolStripMenuItem.Name = "registerNewBugToolStripMenuItem";
-            this.registerNewBugToolStripMenuItem.Size = new System.Drawing.Size(161, 21);
-            this.registerNewBugToolStripMenuItem.Text = "Project  Management";
-            this.registerNewBugToolStripMenuItem.Click += new System.EventHandler(this.registerNewBugToolStripMenuItem_Click);
+            this.ProjectManagementToolStripMenuItem.Name = "ProjectManagementToolStripMenuItem";
+            this.ProjectManagementToolStripMenuItem.Size = new System.Drawing.Size(157, 21);
+            this.ProjectManagementToolStripMenuItem.Text = "Project Management";
+            this.ProjectManagementToolStripMenuItem.ToolTipText = "Project Management";
+            this.ProjectManagementToolStripMenuItem.Click += new System.EventHandler(this.registerNewBugToolStripMenuItem_Click);
             // 
-            // registerBugSolutionToolStripMenuItem
+            // registernewbugToolStripMenuItem
             // 
-            this.registerBugSolutionToolStripMenuItem.Name = "registerBugSolutionToolStripMenuItem";
-            this.registerBugSolutionToolStripMenuItem.Size = new System.Drawing.Size(141, 21);
-            this.registerBugSolutionToolStripMenuItem.Text = "Register New Bug";
-            this.registerBugSolutionToolStripMenuItem.Click += new System.EventHandler(this.registerBugSolutionToolStripMenuItem_Click);
+            this.registernewbugToolStripMenuItem.Name = "registernewbugToolStripMenuItem";
+            this.registernewbugToolStripMenuItem.Size = new System.Drawing.Size(141, 21);
+            this.registernewbugToolStripMenuItem.Text = "Register New Bug";
+            this.registernewbugToolStripMenuItem.ToolTipText = "Register New Bug";
+            this.registernewbugToolStripMenuItem.Click += new System.EventHandler(this.registerBugSolutionToolStripMenuItem_Click);
             // 
-            // bugHistoryToolStripMenuItem
+            // RegBugSolToolStripMenuItem
             // 
-            this.bugHistoryToolStripMenuItem.Name = "bugHistoryToolStripMenuItem";
-            this.bugHistoryToolStripMenuItem.Size = new System.Drawing.Size(165, 21);
-            this.bugHistoryToolStripMenuItem.Text = "Register Bug Solution";
-            this.bugHistoryToolStripMenuItem.Click += new System.EventHandler(this.bugHistoryToolStripMenuItem_Click);
+            this.RegBugSolToolStripMenuItem.Name = "RegBugSolToolStripMenuItem";
+            this.RegBugSolToolStripMenuItem.Size = new System.Drawing.Size(165, 21);
+            this.RegBugSolToolStripMenuItem.Text = "Register Bug Solution";
+            this.RegBugSolToolStripMenuItem.ToolTipText = "Register Bug Solution";
+            this.RegBugSolToolStripMenuItem.Click += new System.EventHandler(this.bugHistoryToolStripMenuItem_Click);
             // 
-            // cloneToBitBucketToolStripMenuItem
+            // BugHistoryToolStripMenuItem
             // 
-            this.cloneToBitBucketToolStripMenuItem.Name = "cloneToBitBucketToolStripMenuItem";
-            this.cloneToBitBucketToolStripMenuItem.Size = new System.Drawing.Size(100, 21);
-            this.cloneToBitBucketToolStripMenuItem.Text = "Bug History";
-            this.cloneToBitBucketToolStripMenuItem.Click += new System.EventHandler(this.cloneToBitBucketToolStripMenuItem_Click);
+            this.BugHistoryToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.helpToolStripMenuItem});
+            this.BugHistoryToolStripMenuItem.Name = "BugHistoryToolStripMenuItem";
+            this.BugHistoryToolStripMenuItem.Size = new System.Drawing.Size(100, 21);
+            this.BugHistoryToolStripMenuItem.Text = "Bug History";
+            this.BugHistoryToolStripMenuItem.ToolTipText = "Bug History";
+            this.BugHistoryToolStripMenuItem.Click += new System.EventHandler(this.cloneToBitBucketToolStripMenuItem_Click);
             // 
-            // logOutToolStripMenuItem
+            // helpToolStripMenuItem
             // 
-            this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(152, 21);
-            this.logOutToolStripMenuItem.Text = "Clone To BitBucket";
-            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.helpToolStripMenuItem.Text = "Help";
+            this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
+            // 
+            // CloneToBitToolStripMenuItem
+            // 
+            this.CloneToBitToolStripMenuItem.Name = "CloneToBitToolStripMenuItem";
+            this.CloneToBitToolStripMenuItem.Size = new System.Drawing.Size(132, 21);
+            this.CloneToBitToolStripMenuItem.Text = "Clone To GitHub";
+            this.CloneToBitToolStripMenuItem.ToolTipText = "Clone To GitHub";
+            this.CloneToBitToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
             // logOutToolStripMenuItem1
             // 
             this.logOutToolStripMenuItem1.Name = "logOutToolStripMenuItem1";
             this.logOutToolStripMenuItem1.Size = new System.Drawing.Size(75, 21);
             this.logOutToolStripMenuItem1.Text = "Log Out";
+            this.logOutToolStripMenuItem1.ToolTipText = "Log Out";
             this.logOutToolStripMenuItem1.Click += new System.EventHandler(this.logOutToolStripMenuItem1_Click);
             // 
             // panel5
@@ -396,7 +419,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(142, 103);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1350, 287);
+            this.panel5.Size = new System.Drawing.Size(1441, 287);
             this.panel5.TabIndex = 4;
             // 
             // lblTotalFixed
@@ -488,7 +511,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.AutoSize = true;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1492, 794);
+            this.ClientSize = new System.Drawing.Size(1583, 794);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -527,29 +550,11 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnManageUserRole;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btnManageUser;
-        private System.Windows.Forms.Button btnLogOut;
-        private System.Windows.Forms.Button BtnClone;
         private System.Windows.Forms.Button btnBugHis;
-        private System.Windows.Forms.Button btnBugSol;
-        private System.Windows.Forms.Button btnNewbug;
-        private System.Windows.Forms.Button btnProjectManage;
-        private System.Windows.Forms.Button btnProjectMember;
-        private System.Windows.Forms.Button btnManageMember;
         private System.Windows.Forms.Label lbldate;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem manageUserRoleToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem manageUserToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem manageMemberToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem manageProjectToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem registerNewBugToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem registerBugSolutionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem bugHistoryToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cloneToBitBucketToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label lblTotalFixed;
         private System.Windows.Forms.Label lblTotalBugResigter;
@@ -560,7 +565,26 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        public System.Windows.Forms.Button btnManageUserRole;
+        public System.Windows.Forms.Button btnManageUser;
+        public System.Windows.Forms.Button btnProjectManage;
+        public System.Windows.Forms.Button btnProjectMember;
+        public System.Windows.Forms.Button btnManageMember;
+        public System.Windows.Forms.Button btnLogOut;
+        public System.Windows.Forms.Button BtnClone;
+        public System.Windows.Forms.Button btnBugSol;
+        public System.Windows.Forms.Button btnNewbug;
+        public System.Windows.Forms.ToolStripMenuItem manageUserRoleToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem manageUserToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem manageMemberToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem manageProjectToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem ProjectManagementToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem registernewbugToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem RegBugSolToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem BugHistoryToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem CloneToBitToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem1;
     }
 }

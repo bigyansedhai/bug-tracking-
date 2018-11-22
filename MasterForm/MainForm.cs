@@ -112,26 +112,14 @@ namespace MasterForm
 
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            // Git to Leave C#
+            System.Diagnostics.Process.Start("https://github.com/bigyansedhai/bug-tracking-");
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            ManageRole mr = new ManageRole();
-            mr.Show();
-        }
+    
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            ManageUser mu = new ManageUser();
-            mu.Show();
-        }
+   
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            ManageMember m = new ManageMember();
-            m.Show();
-        }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
@@ -147,51 +135,92 @@ namespace MasterForm
 
         private void logOutToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            this.Close();
-            LoginFrm f = new LoginFrm();
-            f.Show();
+
+           
+            Application.Exit();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+     
+
+       
+
+       
+
+       
+
+      
+
+      
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnManageUserRole_Click(object sender, EventArgs e)
+        {
+            ManageRole mr = new ManageRole();
+            mr.Show();
+        }
+
+        private void btnManageUser_Click(object sender, EventArgs e)
+        {
+            ManageUser mu = new ManageUser();
+            mu.Show();
+        }
+
+        private void btnManageMember_Click(object sender, EventArgs e)
+        {
+            ManageMember m = new ManageMember();
+            m.Show();
+        }
+
+        private void btnProjectMember_Click(object sender, EventArgs e)
         {
             ProjectMember p = new ProjectMember();
             p.Show();
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void btnProjectManage_Click(object sender, EventArgs e)
         {
             ProjectManagement pm = new ProjectManagement();
             pm.Show();
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void btnNewbug_Click(object sender, EventArgs e)
         {
             RegisterBug r = new RegisterBug();
             r.Show();
         }
 
-        private void button8_Click(object sender, EventArgs e)
+        private void btnBugSol_Click(object sender, EventArgs e)
         {
             RegisterBugSolution rg = new RegisterBugSolution();
             rg.Show();
         }
 
-        private void button9_Click(object sender, EventArgs e)
+        private void btnBugHis_Click(object sender, EventArgs e)
         {
             BugHistory bh = new BugHistory();
             bh.Show();
         }
 
-        private void button11_Click(object sender, EventArgs e)
+        private void BtnClone_Click(object sender, EventArgs e)
+        {
+
+            System.Diagnostics.Process.Start("https://github.com/bigyansedhai/bug-tracking-");
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
         {
             this.Close();
             LoginFrm f = new LoginFrm();
             f.Show();
         }
 
-        private void panel3_Paint(object sender, PaintEventArgs e)
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            System.Diagnostics.Process.Start("file:///D:/The%20British%20college/advance%20software/BugHelp.pdf");
         }
     }
 }

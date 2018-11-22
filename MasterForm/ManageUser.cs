@@ -115,7 +115,7 @@ namespace MasterForm
                 cmbUserRole.Text = dgvManageUser.SelectedRows[0].Cells["Role"].Value.ToString();
                 cmbfirstname.Text = dgvManageUser.SelectedRows[0].Cells["Name"].Value.ToString();
                 txtusername.Text = dgvManageUser.SelectedRows[0].Cells["Username"].Value.ToString();
-                txtusername.Text = dgvManageUser.SelectedRows[0].Cells["Password"].Value.ToString();
+                txtpassword.Text = dgvManageUser.SelectedRows[0].Cells["Password"].Value.ToString();
                 txtconfirmpassword.Text = dgvManageUser.SelectedRows[0].Cells["Password"].Value.ToString();
             }
             catch (Exception ex)

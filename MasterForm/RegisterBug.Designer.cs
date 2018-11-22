@@ -446,7 +446,6 @@
         private System.Windows.Forms.DataGridView dgvRegisterBug;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Panel pnlManageBugInformation;
         private System.Windows.Forms.TextBox txtBugDetails;
@@ -469,5 +468,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.RichTextBox txtCode1;
         private System.Windows.Forms.Label txtcode;
+        public System.Windows.Forms.Button btnDelete;
     }
 }

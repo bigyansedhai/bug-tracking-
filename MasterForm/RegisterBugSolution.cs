@@ -11,6 +11,8 @@ using BussinessLogiclayer;
 using System.IO;
 using System.Data.SqlClient;
 using DataAccesslayer;
+using WinFormsSyntaxHighlighter;
+using System.Text.RegularExpressions;
 
 namespace MasterForm
 {
@@ -19,6 +21,24 @@ namespace MasterForm
         public RegisterBugSolution()
         {
             InitializeComponent();
+            var syntaxHighlighter = new SyntaxHighlighter(txtCode);
+
+            syntaxHighlighter.AddPattern(new PatternDefinition(new Regex(@"/\*(.|[\r\n])*?\*/", RegexOptions.Multiline | RegexOptions.Compiled)), new SyntaxStyle(Color.DarkSeaGreen, false, true));
+
+            syntaxHighlighter.AddPattern(new PatternDefinition(new Regex(@"//.*?$", RegexOptions.Multiline | RegexOptions.Compiled)), new SyntaxStyle(Color.Green, false, true));
+
+            syntaxHighlighter.AddPattern(new PatternDefinition(@"\d+\.\d+|\d+"), new SyntaxStyle(Color.Purple));
+
+            syntaxHighlighter.AddPattern(new PatternDefinition(@"\""([^""]|\""\"")+\"""), new SyntaxStyle(Color.Red));
+
+            syntaxHighlighter.AddPattern(new PatternDefinition(@"\'([^']|\'\')+\'"), new SyntaxStyle(Color.Salmon));
+
+            syntaxHighlighter.AddPattern(new PatternDefinition("for", "foreach", "int", "var"), new SyntaxStyle(Color.Blue));
+
+            syntaxHighlighter.AddPattern(new CaseInsensitivePatternDefinition("public", "partial", "class", "void"), new SyntaxStyle(Color.Navy, true, false));
+
+            syntaxHighlighter.AddPattern(new PatternDefinition("+", "-", ">", "<", "&", "|"), new SyntaxStyle(Color.Brown));
+
         }
         BussinessLogicClass blc = new BussinessLogicClass();
         RegisterBugClass rbc = new RegisterBugClass();
