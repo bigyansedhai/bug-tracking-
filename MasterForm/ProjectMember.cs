@@ -23,6 +23,7 @@ namespace MasterForm
         ManageUserRoleClass ur = new ManageUserRoleClass();
         BussinessLogicClass blc = new BussinessLogicClass();
         public int projectmemberid;
+        public string UserType;
         private void label5_Click(object sender, EventArgs e)
         {
 
@@ -50,6 +51,7 @@ namespace MasterForm
             cmbMemberRole.DisplayMember = "userRole";
             cmbMemberRole.SelectedIndex = -1;
             dgvProjectMember.DataSource = pm.getAllMembersInProject();
+ 
         }
 
         private void dgvProjectMember_CellClick(object sender, DataGridViewCellEventArgs e)

@@ -45,8 +45,9 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(802, 79);
+            this.panel1.Size = new System.Drawing.Size(804, 79);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label1
             // 
@@ -57,6 +58,7 @@
             this.label1.Size = new System.Drawing.Size(246, 49);
             this.label1.TabIndex = 0;
             this.label1.Text = "Bug History";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -67,6 +69,7 @@
             this.label2.Size = new System.Drawing.Size(139, 22);
             this.label2.TabIndex = 1;
             this.label2.Text = "Search History :";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // panel2
             // 
@@ -81,12 +84,12 @@
             // dgvBugHistory
             // 
             this.dgvBugHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBugHistory.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvBugHistory.Location = new System.Drawing.Point(0, 0);
             this.dgvBugHistory.Name = "dgvBugHistory";
-            this.dgvBugHistory.Size = new System.Drawing.Size(796, 292);
+            this.dgvBugHistory.Size = new System.Drawing.Size(798, 292);
             this.dgvBugHistory.TabIndex = 0;
             this.dgvBugHistory.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBugHistory_CellClick);
+            this.dgvBugHistory.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBugHistory_CellContentClick);
             // 
             // cmbBugHistory
             // 
@@ -94,7 +97,7 @@
             this.cmbBugHistory.FormattingEnabled = true;
             this.cmbBugHistory.Location = new System.Drawing.Point(158, 107);
             this.cmbBugHistory.Name = "cmbBugHistory";
-            this.cmbBugHistory.Size = new System.Drawing.Size(337, 24);
+            this.cmbBugHistory.Size = new System.Drawing.Size(339, 24);
             this.cmbBugHistory.TabIndex = 4;
             this.cmbBugHistory.SelectedIndexChanged += new System.EventHandler(this.cmbBugHistory_SelectedIndexChanged);
             this.cmbBugHistory.TextChanged += new System.EventHandler(this.cmbBugHistory_TextChanged);

@@ -47,6 +47,7 @@ namespace MasterForm
         ProjectManagementClass pmc = new ProjectManagementClass();
         MemberClass mcl = new MemberClass();
         int bugId;
+        public string UserType;
         private void label5_Click(object sender, EventArgs e)
         {
 
@@ -221,6 +222,10 @@ namespace MasterForm
             cmbProjectName.ValueMember = "projectId";
             cmbProjectName.DisplayMember = "projectName";
             cmbProjectName.SelectedIndex = -1;
+            if (UserType=="Tester")
+            {
+                btnDelete.Enabled = false;
+            }
 
         }
 

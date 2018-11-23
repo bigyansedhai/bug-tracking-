@@ -59,6 +59,9 @@
     <Compile Include="BugHistory.Designer.cs">
       <DependentUpon>BugHistory.cs</DependentUpon>
     </Compile>
+    <Compile Include="DatabaseBackupRestore.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="LoginFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +112,12 @@
     <Compile Include="RegisterBug.Designer.cs">
       <DependentUpon>RegisterBug.cs</DependentUpon>
     </Compile>
+    <Compile Include="RegisterBugSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterBugSearch.Designer.cs">
+      <DependentUpon>RegisterBugSearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegisterBugSolution.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +126,9 @@
     </Compile>
     <EmbeddedResource Include="BugHistory.resx">
       <DependentUpon>BugHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatabaseBackupRestore.resx">
+      <DependentUpon>DatabaseBackupRestore.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginFrm.resx">
       <DependentUpon>LoginFrm.cs</DependentUpon>
@@ -150,6 +162,9 @@
     </Compile>
     <EmbeddedResource Include="RegisterBug.resx">
       <DependentUpon>RegisterBug.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegisterBugSearch.resx">
+      <DependentUpon>RegisterBugSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegisterBugSolution.resx">
       <DependentUpon>RegisterBugSolution.cs</DependentUpon>

@@ -64,15 +64,17 @@ namespace DataAccesslayer
             }
             finally { conn.Close(); }
         }
-        public DataTable userType(String userName, String userPassword)
+        public DataTable userType(int userRoleId,String userName, String userPassword)
         {
             try
             {
                 DataTable dt = new DataTable();
-                SqlCommand cmd = new SqlCommand("select userRole from UserRoleTable where userRoleId=(select userRoleId from UserTable where userName=@userName and userPassword=@userPassword)", conn);
+                SqlCommand cmd = new SqlCommand("select userRole from UserRoleTable where userRoleId=(select userRoleId from UserTable where userName=@userName and userPassword=@userPassword and userRoleId=@userRoleId)", conn);
                 cmd.CommandType = CommandType.Text;
+                cmd.Parameters.AddWithValue("@userRoleId", userRoleId);
                 cmd.Parameters.AddWithValue("@userName", userName);
                 cmd.Parameters.AddWithValue("@userPassword", userPassword);
+               
                 conn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
                 dt.Load(dr);
@@ -86,7 +88,10 @@ namespace DataAccesslayer
                 throw ex;
             }
             finally { conn.Close(); }
+
+           
         }
+      
 
     }
 }

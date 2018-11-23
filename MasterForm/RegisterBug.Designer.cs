@@ -76,9 +76,10 @@
             this.panel1.BackColor = System.Drawing.Color.Maroon;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(2, 2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1107, 83);
+            this.panel1.Size = new System.Drawing.Size(1112, 83);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -99,7 +100,7 @@
             this.groupBox1.Controls.Add(this.panel2);
             this.groupBox1.Location = new System.Drawing.Point(12, 103);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1088, 517);
+            this.groupBox1.Size = new System.Drawing.Size(1098, 517);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Register Bug";
@@ -130,14 +131,14 @@
             this.pnlManageBugInformation.Controls.Add(this.label2);
             this.pnlManageBugInformation.Location = new System.Drawing.Point(7, 16);
             this.pnlManageBugInformation.Name = "pnlManageBugInformation";
-            this.pnlManageBugInformation.Size = new System.Drawing.Size(725, 501);
+            this.pnlManageBugInformation.Size = new System.Drawing.Size(687, 501);
             this.pnlManageBugInformation.TabIndex = 42;
             // 
             // txtCode1
             // 
             this.txtCode1.Location = new System.Drawing.Point(185, 274);
             this.txtCode1.Name = "txtCode1";
-            this.txtCode1.Size = new System.Drawing.Size(457, 111);
+            this.txtCode1.Size = new System.Drawing.Size(419, 111);
             this.txtCode1.TabIndex = 56;
             this.txtCode1.Text = "";
             // 
@@ -163,28 +164,28 @@
             // 
             this.txtLineNumber.Location = new System.Drawing.Point(185, 246);
             this.txtLineNumber.Name = "txtLineNumber";
-            this.txtLineNumber.Size = new System.Drawing.Size(200, 22);
+            this.txtLineNumber.Size = new System.Drawing.Size(162, 22);
             this.txtLineNumber.TabIndex = 53;
             // 
             // txtBlock
             // 
             this.txtBlock.Location = new System.Drawing.Point(185, 218);
             this.txtBlock.Name = "txtBlock";
-            this.txtBlock.Size = new System.Drawing.Size(200, 22);
+            this.txtBlock.Size = new System.Drawing.Size(162, 22);
             this.txtBlock.TabIndex = 52;
             // 
             // txtMethod
             // 
             this.txtMethod.Location = new System.Drawing.Point(185, 181);
             this.txtMethod.Name = "txtMethod";
-            this.txtMethod.Size = new System.Drawing.Size(200, 22);
+            this.txtMethod.Size = new System.Drawing.Size(162, 22);
             this.txtMethod.TabIndex = 51;
             // 
             // txtClass
             // 
             this.txtClass.Location = new System.Drawing.Point(185, 148);
             this.txtClass.Name = "txtClass";
-            this.txtClass.Size = new System.Drawing.Size(200, 22);
+            this.txtClass.Size = new System.Drawing.Size(162, 22);
             this.txtClass.TabIndex = 50;
             // 
             // label10
@@ -241,7 +242,7 @@
             // 
             this.txtClassLibrary.Location = new System.Drawing.Point(185, 112);
             this.txtClassLibrary.Name = "txtClassLibrary";
-            this.txtClassLibrary.Size = new System.Drawing.Size(200, 22);
+            this.txtClassLibrary.Size = new System.Drawing.Size(162, 22);
             this.txtClassLibrary.TabIndex = 44;
             // 
             // label5
@@ -259,7 +260,7 @@
             this.cmbProjectName.FormattingEnabled = true;
             this.cmbProjectName.Location = new System.Drawing.Point(185, 77);
             this.cmbProjectName.Name = "cmbProjectName";
-            this.cmbProjectName.Size = new System.Drawing.Size(200, 24);
+            this.cmbProjectName.Size = new System.Drawing.Size(162, 24);
             this.cmbProjectName.TabIndex = 42;
             // 
             // label4
@@ -277,7 +278,7 @@
             this.cmbIdentityBy.FormattingEnabled = true;
             this.cmbIdentityBy.Location = new System.Drawing.Point(185, 43);
             this.cmbIdentityBy.Name = "cmbIdentityBy";
-            this.cmbIdentityBy.Size = new System.Drawing.Size(200, 24);
+            this.cmbIdentityBy.Size = new System.Drawing.Size(162, 24);
             this.cmbIdentityBy.TabIndex = 40;
             this.cmbIdentityBy.SelectedIndexChanged += new System.EventHandler(this.cmbIdentityBy_SelectedIndexChanged);
             // 
@@ -295,7 +296,7 @@
             // 
             this.dtpBugIdentityDate.Location = new System.Drawing.Point(185, 14);
             this.dtpBugIdentityDate.Name = "dtpBugIdentityDate";
-            this.dtpBugIdentityDate.Size = new System.Drawing.Size(200, 22);
+            this.dtpBugIdentityDate.Size = new System.Drawing.Size(162, 22);
             this.dtpBugIdentityDate.TabIndex = 38;
             // 
             // label2
@@ -445,8 +446,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView dgvRegisterBug;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Panel pnlManageBugInformation;
         private System.Windows.Forms.TextBox txtBugDetails;
         private System.Windows.Forms.TextBox txtLineNumber;
@@ -469,5 +468,7 @@
         private System.Windows.Forms.RichTextBox txtCode1;
         private System.Windows.Forms.Label txtcode;
         public System.Windows.Forms.Button btnDelete;
+        public System.Windows.Forms.Button btnAdd;
+        public System.Windows.Forms.Button btnUpdate;
     }
 }

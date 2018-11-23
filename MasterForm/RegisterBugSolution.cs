@@ -46,6 +46,7 @@ namespace MasterForm
         RegBugSolutionClass rbs = new RegBugSolutionClass();
         MemberClass mcl = new MemberClass();
         int Id;
+        public string userType;
         private void dgvRegBugSolution_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -119,8 +120,18 @@ namespace MasterForm
 
         private void RegisterBugSolution_Load(object sender, EventArgs e)
         {
-            
-                dgvRegBugSolution.DataSource = rbs.getAllBugSolutions();
+            if (userType == "Tester")
+            {
+                btnUpdate.Enabled = false;
+                btnAdd.Enabled = false;
+                btnDelete.Enabled = false;
+            }
+            else if(userType=="Developer")
+                {
+                btnDelete.Enabled = false;
+            }
+
+            dgvRegBugSolution.DataSource = rbs.getAllBugSolutions();
                 cmbProject.DataSource = pmc.getAllProjects();
                 cmbProject.ValueMember = "projectId";
                 cmbProject.DisplayMember = "projectName";

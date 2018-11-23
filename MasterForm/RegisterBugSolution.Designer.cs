@@ -352,9 +352,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pbPictureIcon;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.DataGridView dgvRegBugSolution;
         private System.Windows.Forms.Panel gbRegisterBugSolution;
@@ -370,5 +367,8 @@
         private System.Windows.Forms.RichTextBox txtCode;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtSolutionDetails;
+        public System.Windows.Forms.Button btnDelete;
+        public System.Windows.Forms.Button btnAdd;
+        public System.Windows.Forms.Button btnUpdate;
     }
 }

@@ -45,6 +45,8 @@
             this.btnManageUser = new System.Windows.Forms.Button();
             this.btnManageUserRole = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lblUserType = new System.Windows.Forms.Label();
+            this.lbluser = new System.Windows.Forms.Label();
             this.lbldate = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -54,10 +56,15 @@
             this.manageProjectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ProjectManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registernewbugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registerBugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registerBugNewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RegBugSolToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.BugHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.CloneToBitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.backUpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.backUpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel5 = new System.Windows.Forms.Panel();
             this.lblTotalFixed = new System.Windows.Forms.Label();
@@ -68,6 +75,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -90,6 +99,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1583, 60);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // pictureBox1
             // 
@@ -256,6 +266,9 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Maroon;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Controls.Add(this.lblUserType);
+            this.panel3.Controls.Add(this.lbluser);
             this.panel3.Controls.Add(this.lbldate);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(142, 706);
@@ -263,6 +276,27 @@
             this.panel3.Size = new System.Drawing.Size(1441, 88);
             this.panel3.TabIndex = 2;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // lblUserType
+            // 
+            this.lblUserType.AutoSize = true;
+            this.lblUserType.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserType.Location = new System.Drawing.Point(220, 33);
+            this.lblUserType.Name = "lblUserType";
+            this.lblUserType.Size = new System.Drawing.Size(88, 23);
+            this.lblUserType.TabIndex = 9;
+            this.lblUserType.Text = "userType";
+            this.lblUserType.Click += new System.EventHandler(this.lblUserType_Click);
+            // 
+            // lbluser
+            // 
+            this.lbluser.AutoSize = true;
+            this.lbluser.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbluser.Location = new System.Drawing.Point(688, 33);
+            this.lbluser.Name = "lbluser";
+            this.lbluser.Size = new System.Drawing.Size(46, 23);
+            this.lbluser.TabIndex = 10;
+            this.lbluser.Text = "user";
             // 
             // lbldate
             // 
@@ -311,6 +345,7 @@
             this.menuStrip1.Size = new System.Drawing.Size(1303, 25);
             this.menuStrip1.Stretch = false;
             this.menuStrip1.TabIndex = 6;
+            this.menuStrip1.Tag = "Register New Bug";
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
@@ -358,11 +393,32 @@
             // 
             // registernewbugToolStripMenuItem
             // 
+            this.registernewbugToolStripMenuItem.AutoToolTip = true;
+            this.registernewbugToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.registernewbugToolStripMenuItem.DoubleClickEnabled = true;
+            this.registernewbugToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.registerBugToolStripMenuItem,
+            this.registerBugNewToolStripMenuItem});
             this.registernewbugToolStripMenuItem.Name = "registernewbugToolStripMenuItem";
             this.registernewbugToolStripMenuItem.Size = new System.Drawing.Size(141, 21);
             this.registernewbugToolStripMenuItem.Text = "Register New Bug";
             this.registernewbugToolStripMenuItem.ToolTipText = "Register New Bug";
             this.registernewbugToolStripMenuItem.Click += new System.EventHandler(this.registerBugSolutionToolStripMenuItem_Click);
+            // 
+            // registerBugToolStripMenuItem
+            // 
+            this.registerBugToolStripMenuItem.DoubleClickEnabled = true;
+            this.registerBugToolStripMenuItem.Name = "registerBugToolStripMenuItem";
+            this.registerBugToolStripMenuItem.Size = new System.Drawing.Size(218, 26);
+            this.registerBugToolStripMenuItem.Text = "Register New Bug";
+            this.registerBugToolStripMenuItem.Click += new System.EventHandler(this.registerBugToolStripMenuItem_Click);
+            // 
+            // registerBugNewToolStripMenuItem
+            // 
+            this.registerBugNewToolStripMenuItem.Name = "registerBugNewToolStripMenuItem";
+            this.registerBugNewToolStripMenuItem.Size = new System.Drawing.Size(218, 26);
+            this.registerBugNewToolStripMenuItem.Text = "Register Bug Search";
+            this.registerBugNewToolStripMenuItem.Click += new System.EventHandler(this.registerBugViewToolStripMenuItem_Click);
             // 
             // RegBugSolToolStripMenuItem
             // 
@@ -375,7 +431,8 @@
             // BugHistoryToolStripMenuItem
             // 
             this.BugHistoryToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.helpToolStripMenuItem});
+            this.helpToolStripMenuItem,
+            this.helpToolStripMenuItem1});
             this.BugHistoryToolStripMenuItem.Name = "BugHistoryToolStripMenuItem";
             this.BugHistoryToolStripMenuItem.Size = new System.Drawing.Size(100, 21);
             this.BugHistoryToolStripMenuItem.Text = "Bug History";
@@ -385,17 +442,41 @@
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.helpToolStripMenuItem.Text = "Help";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(162, 26);
+            this.helpToolStripMenuItem.Text = "Bug History";
             this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
+            // 
+            // helpToolStripMenuItem1
+            // 
+            this.helpToolStripMenuItem1.Name = "helpToolStripMenuItem1";
+            this.helpToolStripMenuItem1.Size = new System.Drawing.Size(162, 26);
+            this.helpToolStripMenuItem1.Text = "Help";
+            this.helpToolStripMenuItem1.Click += new System.EventHandler(this.helpToolStripMenuItem1_Click);
             // 
             // CloneToBitToolStripMenuItem
             // 
+            this.CloneToBitToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.backUpToolStripMenuItem,
+            this.backUpToolStripMenuItem1});
             this.CloneToBitToolStripMenuItem.Name = "CloneToBitToolStripMenuItem";
             this.CloneToBitToolStripMenuItem.Size = new System.Drawing.Size(132, 21);
             this.CloneToBitToolStripMenuItem.Text = "Clone To GitHub";
             this.CloneToBitToolStripMenuItem.ToolTipText = "Clone To GitHub";
             this.CloneToBitToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
+            // 
+            // backUpToolStripMenuItem
+            // 
+            this.backUpToolStripMenuItem.Name = "backUpToolStripMenuItem";
+            this.backUpToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.backUpToolStripMenuItem.Text = "Clone To GitHub";
+            this.backUpToolStripMenuItem.Click += new System.EventHandler(this.backUpToolStripMenuItem_Click);
+            // 
+            // backUpToolStripMenuItem1
+            // 
+            this.backUpToolStripMenuItem1.Name = "backUpToolStripMenuItem1";
+            this.backUpToolStripMenuItem1.Size = new System.Drawing.Size(216, 26);
+            this.backUpToolStripMenuItem1.Text = "Back Up";
+            this.backUpToolStripMenuItem1.Click += new System.EventHandler(this.backUpToolStripMenuItem1_Click);
             // 
             // logOutToolStripMenuItem1
             // 
@@ -419,15 +500,16 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(142, 103);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1441, 287);
+            this.panel5.Size = new System.Drawing.Size(1441, 132);
             this.panel5.TabIndex = 4;
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
             // lblTotalFixed
             // 
             this.lblTotalFixed.AutoSize = true;
             this.lblTotalFixed.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalFixed.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblTotalFixed.Location = new System.Drawing.Point(789, 147);
+            this.lblTotalFixed.Location = new System.Drawing.Point(779, 73);
             this.lblTotalFixed.Name = "lblTotalFixed";
             this.lblTotalFixed.Size = new System.Drawing.Size(20, 23);
             this.lblTotalFixed.TabIndex = 8;
@@ -438,7 +520,7 @@
             this.lblTotalBugResigter.AutoSize = true;
             this.lblTotalBugResigter.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalBugResigter.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblTotalBugResigter.Location = new System.Drawing.Point(789, 73);
+            this.lblTotalBugResigter.Location = new System.Drawing.Point(779, 24);
             this.lblTotalBugResigter.Name = "lblTotalBugResigter";
             this.lblTotalBugResigter.Size = new System.Drawing.Size(20, 23);
             this.lblTotalBugResigter.TabIndex = 7;
@@ -449,7 +531,7 @@
             this.lbltmem.AutoSize = true;
             this.lbltmem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbltmem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbltmem.Location = new System.Drawing.Point(304, 147);
+            this.lbltmem.Location = new System.Drawing.Point(304, 73);
             this.lbltmem.Name = "lbltmem";
             this.lbltmem.Size = new System.Drawing.Size(20, 23);
             this.lbltmem.TabIndex = 6;
@@ -460,7 +542,7 @@
             this.lblTotalProject.AutoSize = true;
             this.lblTotalProject.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalProject.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblTotalProject.Location = new System.Drawing.Point(304, 73);
+            this.lblTotalProject.Location = new System.Drawing.Point(304, 24);
             this.lblTotalProject.Name = "lblTotalProject";
             this.lblTotalProject.Size = new System.Drawing.Size(20, 23);
             this.lblTotalProject.TabIndex = 5;
@@ -470,7 +552,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(660, 147);
+            this.label5.Location = new System.Drawing.Point(605, 73);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(116, 23);
             this.label5.TabIndex = 4;
@@ -480,7 +562,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(141, 147);
+            this.label4.Location = new System.Drawing.Point(141, 73);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(141, 23);
             this.label4.TabIndex = 3;
@@ -490,7 +572,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(596, 73);
+            this.label3.Location = new System.Drawing.Point(575, 24);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(180, 23);
             this.label3.TabIndex = 2;
@@ -500,18 +582,33 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(141, 73);
+            this.label2.Location = new System.Drawing.Point(141, 24);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(133, 23);
             this.label2.TabIndex = 0;
             this.label2.Text = "Total Project :";
             // 
+            // panel6
+            // 
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(142, 235);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(1441, 11);
+            this.panel6.TabIndex = 8;
+            // 
+            // toolStripTextBox1
+            // 
+            this.toolStripTextBox1.Name = "toolStripTextBox1";
+            this.toolStripTextBox1.Size = new System.Drawing.Size(100, 27);
+            // 
             // MainForm
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1583, 794);
+            this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -524,7 +621,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "MainForm";
-            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bug Tracking System";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -581,10 +678,19 @@
         public System.Windows.Forms.ToolStripMenuItem manageMemberToolStripMenuItem;
         public System.Windows.Forms.ToolStripMenuItem manageProjectToolStripMenuItem;
         public System.Windows.Forms.ToolStripMenuItem ProjectManagementToolStripMenuItem;
-        public System.Windows.Forms.ToolStripMenuItem registernewbugToolStripMenuItem;
         public System.Windows.Forms.ToolStripMenuItem RegBugSolToolStripMenuItem;
         public System.Windows.Forms.ToolStripMenuItem BugHistoryToolStripMenuItem;
         public System.Windows.Forms.ToolStripMenuItem CloneToBitToolStripMenuItem;
         public System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem1;
+        private System.Windows.Forms.Panel panel6;
+        public System.Windows.Forms.ToolStripMenuItem registernewbugToolStripMenuItem;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
+        private System.Windows.Forms.ToolStripMenuItem registerBugNewToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem registerBugToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem1;
+        public System.Windows.Forms.Label lblUserType;
+        public System.Windows.Forms.Label lbluser;
+        private System.Windows.Forms.ToolStripMenuItem backUpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem backUpToolStripMenuItem1;
     }
 }

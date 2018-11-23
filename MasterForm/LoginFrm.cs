@@ -22,12 +22,13 @@ namespace MasterForm
 
         ManageUserClass muc = new ManageUserClass();
         ManageUserRoleClass m = new ManageUserRoleClass();
+        RegisterBugClass rbc = new RegisterBugClass();
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-       
+
 
         private void btnConnect_Click(object sender, EventArgs e)
         {
@@ -39,71 +40,89 @@ namespace MasterForm
         {
             try
             {
-                DataTable result = muc.userType(txtUserName.Text, txtPassword.Text);
+                DataTable result = muc.userType(Convert.ToInt32(cmbUserRole.SelectedValue.ToString()),txtUserName.Text, txtPassword.Text);
+
                 String Role = result.Rows[0]["userRole"].ToString();
+              if (Role == "Project  Manager")
+                {
+                    MainForm dashboad = new MainForm();
+                    this.Hide();
+                    MessageBox.Show(ForeColor.IsNamedColor.ToString() + " Login Successfully WELCOME TO BUG TRACKING SYSTEM");
+                    dashboad.lblUserType.Text = cmbUserRole.Text;
+                    dashboad.UserType = cmbUserRole.Text;
+                    dashboad.lbluser.Text = "Username: " + txtUserName.Text;
+                    dashboad.Show();
+                }
 
-                if (Role == "Project  Manager")
+               else if (Role == "Admin")
                 {
                     MainForm dashboad = new MainForm();
                     this.Hide();
 
                     MessageBox.Show(ForeColor.IsNamedColor.ToString() + " Login Successfully WELCOME TO BUG TRACKING SYSTEM");
+                    dashboad.lblUserType.Text = cmbUserRole.Text;
+                    dashboad.UserType = cmbUserRole.Text;
+                    dashboad.lbluser.Text = "Username: " + txtUserName.Text;
                     dashboad.Show();
                 }
-                if(Role == "Admin")
-                {
-                    MainForm dashboad = new MainForm();
-                    this.Hide();
 
-                    MessageBox.Show(ForeColor.IsNamedColor.ToString()+" Login Successfully WELCOME TO BUG TRACKING SYSTEM");
-                    dashboad.Show();
-                }
-                if (Role == "Developer")
+                else if (Role == "Tester")
+
                 {
                     MainForm dashboad = new MainForm();
                     this.Hide();
 
                     MessageBox.Show(ForeColor.IsNamedColor.ToString() + " Login Successfully WELCOME TO BUG TRACKING SYSTEM");
-                    dashboad.btnManageUser.Enabled = false;
-                    dashboad.btnManageMember.Enabled = false;
-                    dashboad.btnManageUserRole.Enabled = false;
-                    dashboad.btnProjectManage.Enabled = false;
-                    dashboad.btnProjectMember.Enabled = false;
-                  
-
-                    dashboad.manageUserToolStripMenuItem.Enabled = false;
-                    dashboad.manageMemberToolStripMenuItem.Enabled = false;
-                    dashboad.manageUserRoleToolStripMenuItem.Enabled = false;
-                    dashboad.manageProjectToolStripMenuItem.Enabled = false;
-                    dashboad.ProjectManagementToolStripMenuItem.Enabled = false;
-                    dashboad.Show();
-                                   
-                }
-                if (Role == "Tester")
-                {
-                    MainForm dashboad = new MainForm();
-                    this.Hide();
-                    MessageBox.Show(ForeColor.IsNamedColor.ToString() + " Login Successfully WELCOME TO BUG TRACKING SYSTEM");
+                    dashboad.lblUserType.Text = cmbUserRole.Text;
+                    dashboad.UserType = cmbUserRole.Text;
+                    dashboad.lbluser.Text = "Username: " + txtUserName.Text;
                     dashboad.btnManageUser.Enabled = false;
                     dashboad.btnManageMember.Enabled = false;
                     dashboad.btnManageUserRole.Enabled = false;
                     dashboad.BtnClone.Enabled = false;
                     dashboad.btnProjectManage.Enabled = false;
                     dashboad.btnProjectMember.Enabled = false;
+                
+
 
                     dashboad.manageUserToolStripMenuItem.Enabled = false;
                     dashboad.manageMemberToolStripMenuItem.Enabled = false;
                     dashboad.manageUserRoleToolStripMenuItem.Enabled = false;
                     dashboad.manageProjectToolStripMenuItem.Enabled = false;
                     dashboad.ProjectManagementToolStripMenuItem.Enabled = false;
-                    dashboad.CloneToBitToolStripMenuItem.Enabled = false;
-                    dashboad.Show();
-
-                   
-
                  
                     
                    
+                    dashboad.Show();
+
+                }
+               else if (Role == "Developer")
+                {
+
+                    MainForm dashboad = new MainForm();
+                    this.Hide();
+
+                    MessageBox.Show(ForeColor.IsNamedColor.ToString() + " Login Successfully WELCOME TO BUG TRACKING SYSTEM");
+                    dashboad.btnManageUser.Enabled = false;
+                    dashboad.btnManageMember.Enabled = false;
+                    dashboad.btnManageUserRole.Enabled = false;
+                    dashboad.btnProjectManage.Enabled = false;
+                    dashboad.btnProjectMember.Enabled = false;
+                    dashboad.manageUserToolStripMenuItem.Enabled = false;
+                    dashboad.manageMemberToolStripMenuItem.Enabled = false;
+                    dashboad.manageUserRoleToolStripMenuItem.Enabled = false;
+                    dashboad.manageProjectToolStripMenuItem.Enabled = false;
+                    dashboad.ProjectManagementToolStripMenuItem.Enabled = false;
+                    dashboad.lblUserType.Text = cmbUserRole.Text;
+                    dashboad.UserType = cmbUserRole.Text;
+                    dashboad.lbluser.Text = "Username: " + txtUserName.Text;
+                    dashboad.Show();
+
+
+                }
+                else
+                {
+                   MessageBox.Show("Invalid User Type");
                 }
             }
             catch (Exception)
@@ -111,7 +130,7 @@ namespace MasterForm
                 MessageBox.Show("Invalid User Name or Password");
             }
         }
-
+    
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox1.Checked == true) 
